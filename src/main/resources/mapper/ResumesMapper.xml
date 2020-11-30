@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kgc.mapper.ResumesMapper" >
+  <resultMap id="BaseResultMap" type="com.kgc.pojo.Resumes" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="realname" property="realname" jdbcType="VARCHAR" />
+    <result column="userpicture" property="userpicture" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="INTEGER" />
+    <result column="workstatus" property="workstatus" jdbcType="INTEGER" />
+    <result column="workyear" property="workyear" jdbcType="INTEGER" />
+    <result column="education" property="education" jdbcType="INTEGER" />
+    <result column="rtelephone" property="rtelephone" jdbcType="VARCHAR" />
+    <result column="remail" property="remail" jdbcType="VARCHAR" />
+    <result column="wantcity" property="wantcity" jdbcType="VARCHAR" />
+    <result column="wantmoney" property="wantmoney" jdbcType="INTEGER" />
+    <result column="ujobtype" property="ujobtype" jdbcType="INTEGER" />
+    <result column="ujobwant" property="ujobwant" jdbcType="VARCHAR" />
+    <result column="workcompany" property="workcompany" jdbcType="VARCHAR" />
+    <result column="workjob" property="workjob" jdbcType="VARCHAR" />
+    <result column="workbeginyear" property="workbeginyear" jdbcType="INTEGER" />
+    <result column="workbeginmonth" property="workbeginmonth" jdbcType="INTEGER" />
+    <result column="workendyear" property="workendyear" jdbcType="INTEGER" />
+    <result column="workendmonth" property="workendmonth" jdbcType="INTEGER" />
+    <result column="projectname" property="projectname" jdbcType="VARCHAR" />
+    <result column="projectjob" property="projectjob" jdbcType="VARCHAR" />
+    <result column="projectbeginyear" property="projectbeginyear" jdbcType="INTEGER" />
+    <result column="prijectbeginmonth" property="prijectbeginmonth" jdbcType="INTEGER" />
+    <result column="projectendyear" property="projectendyear" jdbcType="INTEGER" />
+    <result column="projectendmonth" property="projectendmonth" jdbcType="INTEGER" />
+    <result column="projectdescribe" property="projectdescribe" jdbcType="VARCHAR" />
+    <result column="schoolname" property="schoolname" jdbcType="VARCHAR" />
+    <result column="schoolmajor" property="schoolmajor" jdbcType="VARCHAR" />
+    <result column="schoolbeginyear" property="schoolbeginyear" jdbcType="INTEGER" />
+    <result column="schoolendyear" property="schoolendyear" jdbcType="INTEGER" />
+    <result column="selfdescribe" property="selfdescribe" jdbcType="VARCHAR" />
+    <result column="produtionhref" property="produtionhref" jdbcType="VARCHAR" />
+    <result column="produtioninfo" property="produtioninfo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, uid, realname, userpicture, gender, workstatus, workyear, education, rtelephone, 
+    remail, wantcity, wantmoney, ujobtype, ujobwant, workcompany, workjob, workbeginyear, 
+    workbeginmonth, workendyear, workendmonth, projectname, projectjob, projectbeginyear, 
+    prijectbeginmonth, projectendyear, projectendmonth, projectdescribe, schoolname, 
+    schoolmajor, schoolbeginyear, schoolendyear, selfdescribe, produtionhref, produtioninfo
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kgc.pojo.ResumesExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from resumes
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from resumes
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from resumes
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kgc.pojo.ResumesExample" >
+    delete from resumes
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kgc.pojo.Resumes" >
+    insert into resumes (id, uid, realname, 
+      userpicture, gender, workstatus, 
+      workyear, education, rtelephone, 
+      remail, wantcity, wantmoney, 
+      ujobtype, ujobwant, workcompany, 
+      workjob, workbeginyear, workbeginmonth, 
+      workendyear, workendmonth, projectname, 
+      projectjob, projectbeginyear, prijectbeginmonth, 
+      projectendyear, projectendmonth, projectdescribe, 
+      schoolname, schoolmajor, schoolbeginyear, 
+      schoolendyear, selfdescribe, produtionhref, 
+      produtioninfo)
+    values (#{id,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{realname,jdbcType=VARCHAR}, 
+      #{userpicture,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, #{workstatus,jdbcType=INTEGER}, 
+      #{workyear,jdbcType=INTEGER}, #{education,jdbcType=INTEGER}, #{rtelephone,jdbcType=VARCHAR}, 
+      #{remail,jdbcType=VARCHAR}, #{wantcity,jdbcType=VARCHAR}, #{wantmoney,jdbcType=INTEGER}, 
+      #{ujobtype,jdbcType=INTEGER}, #{ujobwant,jdbcType=VARCHAR}, #{workcompany,jdbcType=VARCHAR}, 
+      #{workjob,jdbcType=VARCHAR}, #{workbeginyear,jdbcType=INTEGER}, #{workbeginmonth,jdbcType=INTEGER}, 
+      #{workendyear,jdbcType=INTEGER}, #{workendmonth,jdbcType=INTEGER}, #{projectname,jdbcType=VARCHAR}, 
+      #{projectjob,jdbcType=VARCHAR}, #{projectbeginyear,jdbcType=INTEGER}, #{prijectbeginmonth,jdbcType=INTEGER}, 
+      #{projectendyear,jdbcType=INTEGER}, #{projectendmonth,jdbcType=INTEGER}, #{projectdescribe,jdbcType=VARCHAR}, 
+      #{schoolname,jdbcType=VARCHAR}, #{schoolmajor,jdbcType=VARCHAR}, #{schoolbeginyear,jdbcType=INTEGER}, 
+      #{schoolendyear,jdbcType=INTEGER}, #{selfdescribe,jdbcType=VARCHAR}, #{produtionhref,jdbcType=VARCHAR}, 
+      #{produtioninfo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kgc.pojo.Resumes" >
+    insert into resumes
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="realname != null" >
+        realname,
+      </if>
+      <if test="userpicture != null" >
+        userpicture,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="workstatus != null" >
+        workstatus,
+      </if>
+      <if test="workyear != null" >
+        workyear,
+      </if>
+      <if test="education != null" >
+        education,
+      </if>
+      <if test="rtelephone != null" >
+        rtelephone,
+      </if>
+      <if test="remail != null" >
+        remail,
+      </if>
+      <if test="wantcity != null" >
+        wantcity,
+      </if>
+      <if test="wantmoney != null" >
+        wantmoney,
+      </if>
+      <if test="ujobtype != null" >
+        ujobtype,
+      </if>
+      <if test="ujobwant != null" >
+        ujobwant,
+      </if>
+      <if test="workcompany != null" >
+        workcompany,
+      </if>
+      <if test="workjob != null" >
+        workjob,
+      </if>
+      <if test="workbeginyear != null" >
+        workbeginyear,
+      </if>
+      <if test="workbeginmonth != null" >
+        workbeginmonth,
+      </if>
+      <if test="workendyear != null" >
+        workendyear,
+      </if>
+      <if test="workendmonth != null" >
+        workendmonth,
+      </if>
+      <if test="projectname != null" >
+        projectname,
+      </if>
+      <if test="projectjob != null" >
+        projectjob,
+      </if>
+      <if test="projectbeginyear != null" >
+        projectbeginyear,
+      </if>
+      <if test="prijectbeginmonth != null" >
+        prijectbeginmonth,
+      </if>
+      <if test="projectendyear != null" >
+        projectendyear,
+      </if>
+      <if test="projectendmonth != null" >
+        projectendmonth,
+      </if>
+      <if test="projectdescribe != null" >
+        projectdescribe,
+      </if>
+      <if test="schoolname != null" >
+        schoolname,
+      </if>
+      <if test="schoolmajor != null" >
+        schoolmajor,
+      </if>
+      <if test="schoolbeginyear != null" >
+        schoolbeginyear,
+      </if>
+      <if test="schoolendyear != null" >
+        schoolendyear,
+      </if>
+      <if test="selfdescribe != null" >
+        selfdescribe,
+      </if>
+      <if test="produtionhref != null" >
+        produtionhref,
+      </if>
+      <if test="produtioninfo != null" >
+        produtioninfo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="userpicture != null" >
+        #{userpicture,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="workstatus != null" >
+        #{workstatus,jdbcType=INTEGER},
+      </if>
+      <if test="workyear != null" >
+        #{workyear,jdbcType=INTEGER},
+      </if>
+      <if test="education != null" >
+        #{education,jdbcType=INTEGER},
+      </if>
+      <if test="rtelephone != null" >
+        #{rtelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="remail != null" >
+        #{remail,jdbcType=VARCHAR},
+      </if>
+      <if test="wantcity != null" >
+        #{wantcity,jdbcType=VARCHAR},
+      </if>
+      <if test="wantmoney != null" >
+        #{wantmoney,jdbcType=INTEGER},
+      </if>
+      <if test="ujobtype != null" >
+        #{ujobtype,jdbcType=INTEGER},
+      </if>
+      <if test="ujobwant != null" >
+        #{ujobwant,jdbcType=VARCHAR},
+      </if>
+      <if test="workcompany != null" >
+        #{workcompany,jdbcType=VARCHAR},
+      </if>
+      <if test="workjob != null" >
+        #{workjob,jdbcType=VARCHAR},
+      </if>
+      <if test="workbeginyear != null" >
+        #{workbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="workbeginmonth != null" >
+        #{workbeginmonth,jdbcType=INTEGER},
+      </if>
+      <if test="workendyear != null" >
+        #{workendyear,jdbcType=INTEGER},
+      </if>
+      <if test="workendmonth != null" >
+        #{workendmonth,jdbcType=INTEGER},
+      </if>
+      <if test="projectname != null" >
+        #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="projectjob != null" >
+        #{projectjob,jdbcType=VARCHAR},
+      </if>
+      <if test="projectbeginyear != null" >
+        #{projectbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="prijectbeginmonth != null" >
+        #{prijectbeginmonth,jdbcType=INTEGER},
+      </if>
+      <if test="projectendyear != null" >
+        #{projectendyear,jdbcType=INTEGER},
+      </if>
+      <if test="projectendmonth != null" >
+        #{projectendmonth,jdbcType=INTEGER},
+      </if>
+      <if test="projectdescribe != null" >
+        #{projectdescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="schoolname != null" >
+        #{schoolname,jdbcType=VARCHAR},
+      </if>
+      <if test="schoolmajor != null" >
+        #{schoolmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="schoolbeginyear != null" >
+        #{schoolbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="schoolendyear != null" >
+        #{schoolendyear,jdbcType=INTEGER},
+      </if>
+      <if test="selfdescribe != null" >
+        #{selfdescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="produtionhref != null" >
+        #{produtionhref,jdbcType=VARCHAR},
+      </if>
+      <if test="produtioninfo != null" >
+        #{produtioninfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kgc.pojo.ResumesExample" resultType="java.lang.Integer" >
+    select count(*) from resumes
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update resumes
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.uid != null" >
+        uid = #{record.uid,jdbcType=INTEGER},
+      </if>
+      <if test="record.realname != null" >
+        realname = #{record.realname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userpicture != null" >
+        userpicture = #{record.userpicture,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gender != null" >
+        gender = #{record.gender,jdbcType=INTEGER},
+      </if>
+      <if test="record.workstatus != null" >
+        workstatus = #{record.workstatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.workyear != null" >
+        workyear = #{record.workyear,jdbcType=INTEGER},
+      </if>
+      <if test="record.education != null" >
+        education = #{record.education,jdbcType=INTEGER},
+      </if>
+      <if test="record.rtelephone != null" >
+        rtelephone = #{record.rtelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remail != null" >
+        remail = #{record.remail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.wantcity != null" >
+        wantcity = #{record.wantcity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.wantmoney != null" >
+        wantmoney = #{record.wantmoney,jdbcType=INTEGER},
+      </if>
+      <if test="record.ujobtype != null" >
+        ujobtype = #{record.ujobtype,jdbcType=INTEGER},
+      </if>
+      <if test="record.ujobwant != null" >
+        ujobwant = #{record.ujobwant,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workcompany != null" >
+        workcompany = #{record.workcompany,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workjob != null" >
+        workjob = #{record.workjob,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workbeginyear != null" >
+        workbeginyear = #{record.workbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="record.workbeginmonth != null" >
+        workbeginmonth = #{record.workbeginmonth,jdbcType=INTEGER},
+      </if>
+      <if test="record.workendyear != null" >
+        workendyear = #{record.workendyear,jdbcType=INTEGER},
+      </if>
+      <if test="record.workendmonth != null" >
+        workendmonth = #{record.workendmonth,jdbcType=INTEGER},
+      </if>
+      <if test="record.projectname != null" >
+        projectname = #{record.projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.projectjob != null" >
+        projectjob = #{record.projectjob,jdbcType=VARCHAR},
+      </if>
+      <if test="record.projectbeginyear != null" >
+        projectbeginyear = #{record.projectbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="record.prijectbeginmonth != null" >
+        prijectbeginmonth = #{record.prijectbeginmonth,jdbcType=INTEGER},
+      </if>
+      <if test="record.projectendyear != null" >
+        projectendyear = #{record.projectendyear,jdbcType=INTEGER},
+      </if>
+      <if test="record.projectendmonth != null" >
+        projectendmonth = #{record.projectendmonth,jdbcType=INTEGER},
+      </if>
+      <if test="record.projectdescribe != null" >
+        projectdescribe = #{record.projectdescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="record.schoolname != null" >
+        schoolname = #{record.schoolname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.schoolmajor != null" >
+        schoolmajor = #{record.schoolmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.schoolbeginyear != null" >
+        schoolbeginyear = #{record.schoolbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="record.schoolendyear != null" >
+        schoolendyear = #{record.schoolendyear,jdbcType=INTEGER},
+      </if>
+      <if test="record.selfdescribe != null" >
+        selfdescribe = #{record.selfdescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="record.produtionhref != null" >
+        produtionhref = #{record.produtionhref,jdbcType=VARCHAR},
+      </if>
+      <if test="record.produtioninfo != null" >
+        produtioninfo = #{record.produtioninfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update resumes
+    set id = #{record.id,jdbcType=INTEGER},
+      uid = #{record.uid,jdbcType=INTEGER},
+      realname = #{record.realname,jdbcType=VARCHAR},
+      userpicture = #{record.userpicture,jdbcType=VARCHAR},
+      gender = #{record.gender,jdbcType=INTEGER},
+      workstatus = #{record.workstatus,jdbcType=INTEGER},
+      workyear = #{record.workyear,jdbcType=INTEGER},
+      education = #{record.education,jdbcType=INTEGER},
+      rtelephone = #{record.rtelephone,jdbcType=VARCHAR},
+      remail = #{record.remail,jdbcType=VARCHAR},
+      wantcity = #{record.wantcity,jdbcType=VARCHAR},
+      wantmoney = #{record.wantmoney,jdbcType=INTEGER},
+      ujobtype = #{record.ujobtype,jdbcType=INTEGER},
+      ujobwant = #{record.ujobwant,jdbcType=VARCHAR},
+      workcompany = #{record.workcompany,jdbcType=VARCHAR},
+      workjob = #{record.workjob,jdbcType=VARCHAR},
+      workbeginyear = #{record.workbeginyear,jdbcType=INTEGER},
+      workbeginmonth = #{record.workbeginmonth,jdbcType=INTEGER},
+      workendyear = #{record.workendyear,jdbcType=INTEGER},
+      workendmonth = #{record.workendmonth,jdbcType=INTEGER},
+      projectname = #{record.projectname,jdbcType=VARCHAR},
+      projectjob = #{record.projectjob,jdbcType=VARCHAR},
+      projectbeginyear = #{record.projectbeginyear,jdbcType=INTEGER},
+      prijectbeginmonth = #{record.prijectbeginmonth,jdbcType=INTEGER},
+      projectendyear = #{record.projectendyear,jdbcType=INTEGER},
+      projectendmonth = #{record.projectendmonth,jdbcType=INTEGER},
+      projectdescribe = #{record.projectdescribe,jdbcType=VARCHAR},
+      schoolname = #{record.schoolname,jdbcType=VARCHAR},
+      schoolmajor = #{record.schoolmajor,jdbcType=VARCHAR},
+      schoolbeginyear = #{record.schoolbeginyear,jdbcType=INTEGER},
+      schoolendyear = #{record.schoolendyear,jdbcType=INTEGER},
+      selfdescribe = #{record.selfdescribe,jdbcType=VARCHAR},
+      produtionhref = #{record.produtionhref,jdbcType=VARCHAR},
+      produtioninfo = #{record.produtioninfo,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kgc.pojo.Resumes" >
+    update resumes
+    <set >
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="realname != null" >
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="userpicture != null" >
+        userpicture = #{userpicture,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="workstatus != null" >
+        workstatus = #{workstatus,jdbcType=INTEGER},
+      </if>
+      <if test="workyear != null" >
+        workyear = #{workyear,jdbcType=INTEGER},
+      </if>
+      <if test="education != null" >
+        education = #{education,jdbcType=INTEGER},
+      </if>
+      <if test="rtelephone != null" >
+        rtelephone = #{rtelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="remail != null" >
+        remail = #{remail,jdbcType=VARCHAR},
+      </if>
+      <if test="wantcity != null" >
+        wantcity = #{wantcity,jdbcType=VARCHAR},
+      </if>
+      <if test="wantmoney != null" >
+        wantmoney = #{wantmoney,jdbcType=INTEGER},
+      </if>
+      <if test="ujobtype != null" >
+        ujobtype = #{ujobtype,jdbcType=INTEGER},
+      </if>
+      <if test="ujobwant != null" >
+        ujobwant = #{ujobwant,jdbcType=VARCHAR},
+      </if>
+      <if test="workcompany != null" >
+        workcompany = #{workcompany,jdbcType=VARCHAR},
+      </if>
+      <if test="workjob != null" >
+        workjob = #{workjob,jdbcType=VARCHAR},
+      </if>
+      <if test="workbeginyear != null" >
+        workbeginyear = #{workbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="workbeginmonth != null" >
+        workbeginmonth = #{workbeginmonth,jdbcType=INTEGER},
+      </if>
+      <if test="workendyear != null" >
+        workendyear = #{workendyear,jdbcType=INTEGER},
+      </if>
+      <if test="workendmonth != null" >
+        workendmonth = #{workendmonth,jdbcType=INTEGER},
+      </if>
+      <if test="projectname != null" >
+        projectname = #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="projectjob != null" >
+        projectjob = #{projectjob,jdbcType=VARCHAR},
+      </if>
+      <if test="projectbeginyear != null" >
+        projectbeginyear = #{projectbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="prijectbeginmonth != null" >
+        prijectbeginmonth = #{prijectbeginmonth,jdbcType=INTEGER},
+      </if>
+      <if test="projectendyear != null" >
+        projectendyear = #{projectendyear,jdbcType=INTEGER},
+      </if>
+      <if test="projectendmonth != null" >
+        projectendmonth = #{projectendmonth,jdbcType=INTEGER},
+      </if>
+      <if test="projectdescribe != null" >
+        projectdescribe = #{projectdescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="schoolname != null" >
+        schoolname = #{schoolname,jdbcType=VARCHAR},
+      </if>
+      <if test="schoolmajor != null" >
+        schoolmajor = #{schoolmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="schoolbeginyear != null" >
+        schoolbeginyear = #{schoolbeginyear,jdbcType=INTEGER},
+      </if>
+      <if test="schoolendyear != null" >
+        schoolendyear = #{schoolendyear,jdbcType=INTEGER},
+      </if>
+      <if test="selfdescribe != null" >
+        selfdescribe = #{selfdescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="produtionhref != null" >
+        produtionhref = #{produtionhref,jdbcType=VARCHAR},
+      </if>
+      <if test="produtioninfo != null" >
+        produtioninfo = #{produtioninfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kgc.pojo.Resumes" >
+    update resumes
+    set uid = #{uid,jdbcType=INTEGER},
+      realname = #{realname,jdbcType=VARCHAR},
+      userpicture = #{userpicture,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=INTEGER},
+      workstatus = #{workstatus,jdbcType=INTEGER},
+      workyear = #{workyear,jdbcType=INTEGER},
+      education = #{education,jdbcType=INTEGER},
+      rtelephone = #{rtelephone,jdbcType=VARCHAR},
+      remail = #{remail,jdbcType=VARCHAR},
+      wantcity = #{wantcity,jdbcType=VARCHAR},
+      wantmoney = #{wantmoney,jdbcType=INTEGER},
+      ujobtype = #{ujobtype,jdbcType=INTEGER},
+      ujobwant = #{ujobwant,jdbcType=VARCHAR},
+      workcompany = #{workcompany,jdbcType=VARCHAR},
+      workjob = #{workjob,jdbcType=VARCHAR},
+      workbeginyear = #{workbeginyear,jdbcType=INTEGER},
+      workbeginmonth = #{workbeginmonth,jdbcType=INTEGER},
+      workendyear = #{workendyear,jdbcType=INTEGER},
+      workendmonth = #{workendmonth,jdbcType=INTEGER},
+      projectname = #{projectname,jdbcType=VARCHAR},
+      projectjob = #{projectjob,jdbcType=VARCHAR},
+      projectbeginyear = #{projectbeginyear,jdbcType=INTEGER},
+      prijectbeginmonth = #{prijectbeginmonth,jdbcType=INTEGER},
+      projectendyear = #{projectendyear,jdbcType=INTEGER},
+      projectendmonth = #{projectendmonth,jdbcType=INTEGER},
+      projectdescribe = #{projectdescribe,jdbcType=VARCHAR},
+      schoolname = #{schoolname,jdbcType=VARCHAR},
+      schoolmajor = #{schoolmajor,jdbcType=VARCHAR},
+      schoolbeginyear = #{schoolbeginyear,jdbcType=INTEGER},
+      schoolendyear = #{schoolendyear,jdbcType=INTEGER},
+      selfdescribe = #{selfdescribe,jdbcType=VARCHAR},
+      produtionhref = #{produtionhref,jdbcType=VARCHAR},
+      produtioninfo = #{produtioninfo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

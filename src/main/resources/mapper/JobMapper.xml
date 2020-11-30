@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kgc.mapper.JobMapper" >
+  <resultMap id="BaseResultMap" type="com.kgc.pojo.Job" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="jobstatus" property="jobstatus" jdbcType="INTEGER" />
+    <result column="cjobtype" property="cjobtype" jdbcType="VARCHAR" />
+    <result column="cjobname" property="cjobname" jdbcType="VARCHAR" />
+    <result column="department" property="department" jdbcType="VARCHAR" />
+    <result column="nature" property="nature" jdbcType="INTEGER" />
+    <result column="minmoney" property="minmoney" jdbcType="INTEGER" />
+    <result column="maxmoney" property="maxmoney" jdbcType="INTEGER" />
+    <result column="workcity" property="workcity" jdbcType="VARCHAR" />
+    <result column="workexperience" property="workexperience" jdbcType="INTEGER" />
+    <result column="education" property="education" jdbcType="INTEGER" />
+    <result column="cweal" property="cweal" jdbcType="VARCHAR" />
+    <result column="workdescribes" property="workdescribes" jdbcType="VARCHAR" />
+    <result column="workaddress" property="workaddress" jdbcType="VARCHAR" />
+    <result column="cemail" property="cemail" jdbcType="VARCHAR" />
+    <result column="worktime" property="worktime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, jobstatus, cjobtype, cjobname, department, nature, minmoney, maxmoney, workcity, 
+    workexperience, education, cweal, workdescribes, workaddress, cemail, worktime
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kgc.pojo.JobExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from job
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from job
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from job
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kgc.pojo.JobExample" >
+    delete from job
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kgc.pojo.Job" >
+    insert into job (id, jobstatus, cjobtype, 
+      cjobname, department, nature, 
+      minmoney, maxmoney, workcity, 
+      workexperience, education, cweal, 
+      workdescribes, workaddress, cemail, 
+      worktime)
+    values (#{id,jdbcType=INTEGER}, #{jobstatus,jdbcType=INTEGER}, #{cjobtype,jdbcType=VARCHAR}, 
+      #{cjobname,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR}, #{nature,jdbcType=INTEGER}, 
+      #{minmoney,jdbcType=INTEGER}, #{maxmoney,jdbcType=INTEGER}, #{workcity,jdbcType=VARCHAR}, 
+      #{workexperience,jdbcType=INTEGER}, #{education,jdbcType=INTEGER}, #{cweal,jdbcType=VARCHAR}, 
+      #{workdescribes,jdbcType=VARCHAR}, #{workaddress,jdbcType=VARCHAR}, #{cemail,jdbcType=VARCHAR}, 
+      #{worktime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kgc.pojo.Job" >
+    insert into job
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="jobstatus != null" >
+        jobstatus,
+      </if>
+      <if test="cjobtype != null" >
+        cjobtype,
+      </if>
+      <if test="cjobname != null" >
+        cjobname,
+      </if>
+      <if test="department != null" >
+        department,
+      </if>
+      <if test="nature != null" >
+        nature,
+      </if>
+      <if test="minmoney != null" >
+        minmoney,
+      </if>
+      <if test="maxmoney != null" >
+        maxmoney,
+      </if>
+      <if test="workcity != null" >
+        workcity,
+      </if>
+      <if test="workexperience != null" >
+        workexperience,
+      </if>
+      <if test="education != null" >
+        education,
+      </if>
+      <if test="cweal != null" >
+        cweal,
+      </if>
+      <if test="workdescribes != null" >
+        workdescribes,
+      </if>
+      <if test="workaddress != null" >
+        workaddress,
+      </if>
+      <if test="cemail != null" >
+        cemail,
+      </if>
+      <if test="worktime != null" >
+        worktime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="jobstatus != null" >
+        #{jobstatus,jdbcType=INTEGER},
+      </if>
+      <if test="cjobtype != null" >
+        #{cjobtype,jdbcType=VARCHAR},
+      </if>
+      <if test="cjobname != null" >
+        #{cjobname,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null" >
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="nature != null" >
+        #{nature,jdbcType=INTEGER},
+      </if>
+      <if test="minmoney != null" >
+        #{minmoney,jdbcType=INTEGER},
+      </if>
+      <if test="maxmoney != null" >
+        #{maxmoney,jdbcType=INTEGER},
+      </if>
+      <if test="workcity != null" >
+        #{workcity,jdbcType=VARCHAR},
+      </if>
+      <if test="workexperience != null" >
+        #{workexperience,jdbcType=INTEGER},
+      </if>
+      <if test="education != null" >
+        #{education,jdbcType=INTEGER},
+      </if>
+      <if test="cweal != null" >
+        #{cweal,jdbcType=VARCHAR},
+      </if>
+      <if test="workdescribes != null" >
+        #{workdescribes,jdbcType=VARCHAR},
+      </if>
+      <if test="workaddress != null" >
+        #{workaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cemail != null" >
+        #{cemail,jdbcType=VARCHAR},
+      </if>
+      <if test="worktime != null" >
+        #{worktime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kgc.pojo.JobExample" resultType="java.lang.Integer" >
+    select count(*) from job
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update job
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.jobstatus != null" >
+        jobstatus = #{record.jobstatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.cjobtype != null" >
+        cjobtype = #{record.cjobtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cjobname != null" >
+        cjobname = #{record.cjobname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.department != null" >
+        department = #{record.department,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nature != null" >
+        nature = #{record.nature,jdbcType=INTEGER},
+      </if>
+      <if test="record.minmoney != null" >
+        minmoney = #{record.minmoney,jdbcType=INTEGER},
+      </if>
+      <if test="record.maxmoney != null" >
+        maxmoney = #{record.maxmoney,jdbcType=INTEGER},
+      </if>
+      <if test="record.workcity != null" >
+        workcity = #{record.workcity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workexperience != null" >
+        workexperience = #{record.workexperience,jdbcType=INTEGER},
+      </if>
+      <if test="record.education != null" >
+        education = #{record.education,jdbcType=INTEGER},
+      </if>
+      <if test="record.cweal != null" >
+        cweal = #{record.cweal,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workdescribes != null" >
+        workdescribes = #{record.workdescribes,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workaddress != null" >
+        workaddress = #{record.workaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cemail != null" >
+        cemail = #{record.cemail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.worktime != null" >
+        worktime = #{record.worktime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update job
+    set id = #{record.id,jdbcType=INTEGER},
+      jobstatus = #{record.jobstatus,jdbcType=INTEGER},
+      cjobtype = #{record.cjobtype,jdbcType=VARCHAR},
+      cjobname = #{record.cjobname,jdbcType=VARCHAR},
+      department = #{record.department,jdbcType=VARCHAR},
+      nature = #{record.nature,jdbcType=INTEGER},
+      minmoney = #{record.minmoney,jdbcType=INTEGER},
+      maxmoney = #{record.maxmoney,jdbcType=INTEGER},
+      workcity = #{record.workcity,jdbcType=VARCHAR},
+      workexperience = #{record.workexperience,jdbcType=INTEGER},
+      education = #{record.education,jdbcType=INTEGER},
+      cweal = #{record.cweal,jdbcType=VARCHAR},
+      workdescribes = #{record.workdescribes,jdbcType=VARCHAR},
+      workaddress = #{record.workaddress,jdbcType=VARCHAR},
+      cemail = #{record.cemail,jdbcType=VARCHAR},
+      worktime = #{record.worktime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kgc.pojo.Job" >
+    update job
+    <set >
+      <if test="jobstatus != null" >
+        jobstatus = #{jobstatus,jdbcType=INTEGER},
+      </if>
+      <if test="cjobtype != null" >
+        cjobtype = #{cjobtype,jdbcType=VARCHAR},
+      </if>
+      <if test="cjobname != null" >
+        cjobname = #{cjobname,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null" >
+        department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="nature != null" >
+        nature = #{nature,jdbcType=INTEGER},
+      </if>
+      <if test="minmoney != null" >
+        minmoney = #{minmoney,jdbcType=INTEGER},
+      </if>
+      <if test="maxmoney != null" >
+        maxmoney = #{maxmoney,jdbcType=INTEGER},
+      </if>
+      <if test="workcity != null" >
+        workcity = #{workcity,jdbcType=VARCHAR},
+      </if>
+      <if test="workexperience != null" >
+        workexperience = #{workexperience,jdbcType=INTEGER},
+      </if>
+      <if test="education != null" >
+        education = #{education,jdbcType=INTEGER},
+      </if>
+      <if test="cweal != null" >
+        cweal = #{cweal,jdbcType=VARCHAR},
+      </if>
+      <if test="workdescribes != null" >
+        workdescribes = #{workdescribes,jdbcType=VARCHAR},
+      </if>
+      <if test="workaddress != null" >
+        workaddress = #{workaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="cemail != null" >
+        cemail = #{cemail,jdbcType=VARCHAR},
+      </if>
+      <if test="worktime != null" >
+        worktime = #{worktime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kgc.pojo.Job" >
+    update job
+    set jobstatus = #{jobstatus,jdbcType=INTEGER},
+      cjobtype = #{cjobtype,jdbcType=VARCHAR},
+      cjobname = #{cjobname,jdbcType=VARCHAR},
+      department = #{department,jdbcType=VARCHAR},
+      nature = #{nature,jdbcType=INTEGER},
+      minmoney = #{minmoney,jdbcType=INTEGER},
+      maxmoney = #{maxmoney,jdbcType=INTEGER},
+      workcity = #{workcity,jdbcType=VARCHAR},
+      workexperience = #{workexperience,jdbcType=INTEGER},
+      education = #{education,jdbcType=INTEGER},
+      cweal = #{cweal,jdbcType=VARCHAR},
+      workdescribes = #{workdescribes,jdbcType=VARCHAR},
+      workaddress = #{workaddress,jdbcType=VARCHAR},
+      cemail = #{cemail,jdbcType=VARCHAR},
+      worktime = #{worktime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
