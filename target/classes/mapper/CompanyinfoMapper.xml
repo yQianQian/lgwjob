@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kgc.mapper.CompanyinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.kgc.pojo.Companyinfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="logo" property="logo" jdbcType="VARCHAR" />
+    <result column="companydescribe" property="companydescribe" jdbcType="VARCHAR" />
+    <result column="weal" property="weal" jdbcType="VARCHAR" />
+    <result column="companytelephone" property="companytelephone" jdbcType="VARCHAR" />
+    <result column="companyemail" property="companyemail" jdbcType="VARCHAR" />
+    <result column="companyname" property="companyname" jdbcType="VARCHAR" />
+    <result column="companycity" property="companycity" jdbcType="VARCHAR" />
+    <result column="companydomain" property="companydomain" jdbcType="VARCHAR" />
+    <result column="develop" property="develop" jdbcType="INTEGER" />
+    <result column="companyscale" property="companyscale" jdbcType="INTEGER" />
+    <result column="companyweb" property="companyweb" jdbcType="VARCHAR" />
+    <result column="phasenow" property="phasenow" jdbcType="INTEGER" />
+    <result column="phaseago" property="phaseago" jdbcType="INTEGER" />
+    <result column="investor" property="investor" jdbcType="VARCHAR" />
+    <result column="productname" property="productname" jdbcType="VARCHAR" />
+    <result column="producturl" property="producturl" jdbcType="VARCHAR" />
+    <result column="productinfo" property="productinfo" jdbcType="VARCHAR" />
+    <result column="partername" property="partername" jdbcType="VARCHAR" />
+    <result column="parterphoto" property="parterphoto" jdbcType="VARCHAR" />
+    <result column="parterjob" property="parterjob" jdbcType="VARCHAR" />
+    <result column="parterwebo" property="parterwebo" jdbcType="VARCHAR" />
+    <result column="parterinfo" property="parterinfo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, uid, logo, companydescribe, weal, companytelephone, companyemail, companyname, 
+    companycity, companydomain, develop, companyscale, companyweb, phasenow, phaseago, 
+    investor, productname, producturl, productinfo, partername, parterphoto, parterjob, 
+    parterwebo, parterinfo
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kgc.pojo.CompanyinfoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from companyinfo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from companyinfo
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from companyinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.kgc.pojo.CompanyinfoExample" >
+    delete from companyinfo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.kgc.pojo.Companyinfo" >
+    insert into companyinfo (id, uid, logo, 
+      companydescribe, weal, companytelephone, 
+      companyemail, companyname, companycity, 
+      companydomain, develop, companyscale, 
+      companyweb, phasenow, phaseago, 
+      investor, productname, producturl, 
+      productinfo, partername, parterphoto, 
+      parterjob, parterwebo, parterinfo
+      )
+    values (#{id,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{logo,jdbcType=VARCHAR}, 
+      #{companydescribe,jdbcType=VARCHAR}, #{weal,jdbcType=VARCHAR}, #{companytelephone,jdbcType=VARCHAR}, 
+      #{companyemail,jdbcType=VARCHAR}, #{companyname,jdbcType=VARCHAR}, #{companycity,jdbcType=VARCHAR}, 
+      #{companydomain,jdbcType=VARCHAR}, #{develop,jdbcType=INTEGER}, #{companyscale,jdbcType=INTEGER}, 
+      #{companyweb,jdbcType=VARCHAR}, #{phasenow,jdbcType=INTEGER}, #{phaseago,jdbcType=INTEGER}, 
+      #{investor,jdbcType=VARCHAR}, #{productname,jdbcType=VARCHAR}, #{producturl,jdbcType=VARCHAR}, 
+      #{productinfo,jdbcType=VARCHAR}, #{partername,jdbcType=VARCHAR}, #{parterphoto,jdbcType=VARCHAR}, 
+      #{parterjob,jdbcType=VARCHAR}, #{parterwebo,jdbcType=VARCHAR}, #{parterinfo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.kgc.pojo.Companyinfo" >
+    insert into companyinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="logo != null" >
+        logo,
+      </if>
+      <if test="companydescribe != null" >
+        companydescribe,
+      </if>
+      <if test="weal != null" >
+        weal,
+      </if>
+      <if test="companytelephone != null" >
+        companytelephone,
+      </if>
+      <if test="companyemail != null" >
+        companyemail,
+      </if>
+      <if test="companyname != null" >
+        companyname,
+      </if>
+      <if test="companycity != null" >
+        companycity,
+      </if>
+      <if test="companydomain != null" >
+        companydomain,
+      </if>
+      <if test="develop != null" >
+        develop,
+      </if>
+      <if test="companyscale != null" >
+        companyscale,
+      </if>
+      <if test="companyweb != null" >
+        companyweb,
+      </if>
+      <if test="phasenow != null" >
+        phasenow,
+      </if>
+      <if test="phaseago != null" >
+        phaseago,
+      </if>
+      <if test="investor != null" >
+        investor,
+      </if>
+      <if test="productname != null" >
+        productname,
+      </if>
+      <if test="producturl != null" >
+        producturl,
+      </if>
+      <if test="productinfo != null" >
+        productinfo,
+      </if>
+      <if test="partername != null" >
+        partername,
+      </if>
+      <if test="parterphoto != null" >
+        parterphoto,
+      </if>
+      <if test="parterjob != null" >
+        parterjob,
+      </if>
+      <if test="parterwebo != null" >
+        parterwebo,
+      </if>
+      <if test="parterinfo != null" >
+        parterinfo,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="logo != null" >
+        #{logo,jdbcType=VARCHAR},
+      </if>
+      <if test="companydescribe != null" >
+        #{companydescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="weal != null" >
+        #{weal,jdbcType=VARCHAR},
+      </if>
+      <if test="companytelephone != null" >
+        #{companytelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="companyemail != null" >
+        #{companyemail,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null" >
+        #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="companycity != null" >
+        #{companycity,jdbcType=VARCHAR},
+      </if>
+      <if test="companydomain != null" >
+        #{companydomain,jdbcType=VARCHAR},
+      </if>
+      <if test="develop != null" >
+        #{develop,jdbcType=INTEGER},
+      </if>
+      <if test="companyscale != null" >
+        #{companyscale,jdbcType=INTEGER},
+      </if>
+      <if test="companyweb != null" >
+        #{companyweb,jdbcType=VARCHAR},
+      </if>
+      <if test="phasenow != null" >
+        #{phasenow,jdbcType=INTEGER},
+      </if>
+      <if test="phaseago != null" >
+        #{phaseago,jdbcType=INTEGER},
+      </if>
+      <if test="investor != null" >
+        #{investor,jdbcType=VARCHAR},
+      </if>
+      <if test="productname != null" >
+        #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="producturl != null" >
+        #{producturl,jdbcType=VARCHAR},
+      </if>
+      <if test="productinfo != null" >
+        #{productinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="partername != null" >
+        #{partername,jdbcType=VARCHAR},
+      </if>
+      <if test="parterphoto != null" >
+        #{parterphoto,jdbcType=VARCHAR},
+      </if>
+      <if test="parterjob != null" >
+        #{parterjob,jdbcType=VARCHAR},
+      </if>
+      <if test="parterwebo != null" >
+        #{parterwebo,jdbcType=VARCHAR},
+      </if>
+      <if test="parterinfo != null" >
+        #{parterinfo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.kgc.pojo.CompanyinfoExample" resultType="java.lang.Integer" >
+    select count(*) from companyinfo
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update companyinfo
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.uid != null" >
+        uid = #{record.uid,jdbcType=INTEGER},
+      </if>
+      <if test="record.logo != null" >
+        logo = #{record.logo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companydescribe != null" >
+        companydescribe = #{record.companydescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weal != null" >
+        weal = #{record.weal,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companytelephone != null" >
+        companytelephone = #{record.companytelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyemail != null" >
+        companyemail = #{record.companyemail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companyname != null" >
+        companyname = #{record.companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companycity != null" >
+        companycity = #{record.companycity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.companydomain != null" >
+        companydomain = #{record.companydomain,jdbcType=VARCHAR},
+      </if>
+      <if test="record.develop != null" >
+        develop = #{record.develop,jdbcType=INTEGER},
+      </if>
+      <if test="record.companyscale != null" >
+        companyscale = #{record.companyscale,jdbcType=INTEGER},
+      </if>
+      <if test="record.companyweb != null" >
+        companyweb = #{record.companyweb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phasenow != null" >
+        phasenow = #{record.phasenow,jdbcType=INTEGER},
+      </if>
+      <if test="record.phaseago != null" >
+        phaseago = #{record.phaseago,jdbcType=INTEGER},
+      </if>
+      <if test="record.investor != null" >
+        investor = #{record.investor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productname != null" >
+        productname = #{record.productname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.producturl != null" >
+        producturl = #{record.producturl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productinfo != null" >
+        productinfo = #{record.productinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.partername != null" >
+        partername = #{record.partername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parterphoto != null" >
+        parterphoto = #{record.parterphoto,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parterjob != null" >
+        parterjob = #{record.parterjob,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parterwebo != null" >
+        parterwebo = #{record.parterwebo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parterinfo != null" >
+        parterinfo = #{record.parterinfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update companyinfo
+    set id = #{record.id,jdbcType=INTEGER},
+      uid = #{record.uid,jdbcType=INTEGER},
+      logo = #{record.logo,jdbcType=VARCHAR},
+      companydescribe = #{record.companydescribe,jdbcType=VARCHAR},
+      weal = #{record.weal,jdbcType=VARCHAR},
+      companytelephone = #{record.companytelephone,jdbcType=VARCHAR},
+      companyemail = #{record.companyemail,jdbcType=VARCHAR},
+      companyname = #{record.companyname,jdbcType=VARCHAR},
+      companycity = #{record.companycity,jdbcType=VARCHAR},
+      companydomain = #{record.companydomain,jdbcType=VARCHAR},
+      develop = #{record.develop,jdbcType=INTEGER},
+      companyscale = #{record.companyscale,jdbcType=INTEGER},
+      companyweb = #{record.companyweb,jdbcType=VARCHAR},
+      phasenow = #{record.phasenow,jdbcType=INTEGER},
+      phaseago = #{record.phaseago,jdbcType=INTEGER},
+      investor = #{record.investor,jdbcType=VARCHAR},
+      productname = #{record.productname,jdbcType=VARCHAR},
+      producturl = #{record.producturl,jdbcType=VARCHAR},
+      productinfo = #{record.productinfo,jdbcType=VARCHAR},
+      partername = #{record.partername,jdbcType=VARCHAR},
+      parterphoto = #{record.parterphoto,jdbcType=VARCHAR},
+      parterjob = #{record.parterjob,jdbcType=VARCHAR},
+      parterwebo = #{record.parterwebo,jdbcType=VARCHAR},
+      parterinfo = #{record.parterinfo,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kgc.pojo.Companyinfo" >
+    update companyinfo
+    <set >
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="logo != null" >
+        logo = #{logo,jdbcType=VARCHAR},
+      </if>
+      <if test="companydescribe != null" >
+        companydescribe = #{companydescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="weal != null" >
+        weal = #{weal,jdbcType=VARCHAR},
+      </if>
+      <if test="companytelephone != null" >
+        companytelephone = #{companytelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="companyemail != null" >
+        companyemail = #{companyemail,jdbcType=VARCHAR},
+      </if>
+      <if test="companyname != null" >
+        companyname = #{companyname,jdbcType=VARCHAR},
+      </if>
+      <if test="companycity != null" >
+        companycity = #{companycity,jdbcType=VARCHAR},
+      </if>
+      <if test="companydomain != null" >
+        companydomain = #{companydomain,jdbcType=VARCHAR},
+      </if>
+      <if test="develop != null" >
+        develop = #{develop,jdbcType=INTEGER},
+      </if>
+      <if test="companyscale != null" >
+        companyscale = #{companyscale,jdbcType=INTEGER},
+      </if>
+      <if test="companyweb != null" >
+        companyweb = #{companyweb,jdbcType=VARCHAR},
+      </if>
+      <if test="phasenow != null" >
+        phasenow = #{phasenow,jdbcType=INTEGER},
+      </if>
+      <if test="phaseago != null" >
+        phaseago = #{phaseago,jdbcType=INTEGER},
+      </if>
+      <if test="investor != null" >
+        investor = #{investor,jdbcType=VARCHAR},
+      </if>
+      <if test="productname != null" >
+        productname = #{productname,jdbcType=VARCHAR},
+      </if>
+      <if test="producturl != null" >
+        producturl = #{producturl,jdbcType=VARCHAR},
+      </if>
+      <if test="productinfo != null" >
+        productinfo = #{productinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="partername != null" >
+        partername = #{partername,jdbcType=VARCHAR},
+      </if>
+      <if test="parterphoto != null" >
+        parterphoto = #{parterphoto,jdbcType=VARCHAR},
+      </if>
+      <if test="parterjob != null" >
+        parterjob = #{parterjob,jdbcType=VARCHAR},
+      </if>
+      <if test="parterwebo != null" >
+        parterwebo = #{parterwebo,jdbcType=VARCHAR},
+      </if>
+      <if test="parterinfo != null" >
+        parterinfo = #{parterinfo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kgc.pojo.Companyinfo" >
+    update companyinfo
+    set uid = #{uid,jdbcType=INTEGER},
+      logo = #{logo,jdbcType=VARCHAR},
+      companydescribe = #{companydescribe,jdbcType=VARCHAR},
+      weal = #{weal,jdbcType=VARCHAR},
+      companytelephone = #{companytelephone,jdbcType=VARCHAR},
+      companyemail = #{companyemail,jdbcType=VARCHAR},
+      companyname = #{companyname,jdbcType=VARCHAR},
+      companycity = #{companycity,jdbcType=VARCHAR},
+      companydomain = #{companydomain,jdbcType=VARCHAR},
+      develop = #{develop,jdbcType=INTEGER},
+      companyscale = #{companyscale,jdbcType=INTEGER},
+      companyweb = #{companyweb,jdbcType=VARCHAR},
+      phasenow = #{phasenow,jdbcType=INTEGER},
+      phaseago = #{phaseago,jdbcType=INTEGER},
+      investor = #{investor,jdbcType=VARCHAR},
+      productname = #{productname,jdbcType=VARCHAR},
+      producturl = #{producturl,jdbcType=VARCHAR},
+      productinfo = #{productinfo,jdbcType=VARCHAR},
+      partername = #{partername,jdbcType=VARCHAR},
+      parterphoto = #{parterphoto,jdbcType=VARCHAR},
+      parterjob = #{parterjob,jdbcType=VARCHAR},
+      parterwebo = #{parterwebo,jdbcType=VARCHAR},
+      parterinfo = #{parterinfo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

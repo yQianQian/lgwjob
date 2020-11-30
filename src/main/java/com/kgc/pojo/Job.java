@@ -5,6 +5,8 @@ import java.util.Date;
 public class Job {
     private Integer id;
 
+    private Integer cid;
+
     private Integer jobstatus;
 
     private String cjobtype;
@@ -41,6 +43,14 @@ public class Job {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getCid() {
+        return cid;
+    }
+
+    public void setCid(Integer cid) {
+        this.cid = cid;
     }
 
     public Integer getJobstatus() {
