@@ -44,20 +44,20 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a href="index.jsp" class="logo">
+            <a href="/index.do" class="logo">
                 <img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘"/>
             </a>
             <ul class="reset" id="navheader">
-                <li><a href="index.jsp">首页</a></li>
-                <li class="current"><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li class="current"><a href="/companylist.do">公司</a></li>
                 <li><a href="h/toForum.jsp" target="_blank">论坛</a></li>
-                <li><a href="jianli.jsp" rel="nofollow">我的简历</a></li>
-                <li><a href="create.jsp" rel="nofollow">发布职位</a></li>
+                <li><a href="/jianli.do" rel="nofollow">我的简历</a></li>
+                <li><a href="/create.do" rel="nofollow">发布职位</a></li>
             </ul>
             <ul class="loginTop">
-                <li><a href="login.jsp" rel="nofollow">登录</a></li>
+                <li><a href="/login.do" rel="nofollow">登录</a></li>
                 <li>|</li>
-                <li><a href="register.jsp" rel="nofollow">注册</a></li>
+                <li><a href="/register.do" rel="nofollow">注册</a></li>
             </ul>
         </div>
     </div><!-- end #header -->
@@ -65,7 +65,7 @@
 
         <div class="clearfix">
             <div class="content_l">
-                <form id="companyListForm" name="companyListForm" method="get" action="h/c/companylist.jsp">
+                <form id="companyListForm" name="companyListForm" method="get" action="/companylist.do">
                     <input type="hidden" id="city" name="city" value="全国"/>
                     <input type="hidden" id="fs" name="fs" value=""/>
                     <input type="hidden" id="ifs" name="ifs" value=""/>
@@ -624,7 +624,7 @@
             </div>
             <div class="content_r">
                 <div class="subscribe_side">
-                    <a href="subscribe.jsp" target="_blank">
+                    <a href="/subscribe.do" target="_blank">
                         <div class="subpos"><span>订阅</span> 职位</div>
                         <div class="c7">拉勾网会根据你的筛选条件，定期将符合你要求的职位信息发给你
                         </div>
@@ -675,7 +675,7 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a href="h/about.jsp" target="_blank" rel="nofollow">联系我们</a>
+        <a href="/about.do" target="_blank" rel="nofollow">联系我们</a>
         <a href="h/af/zhaopin.jsp" target="_blank">互联网公司导航</a>
         <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
         <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>

@@ -39,20 +39,20 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a href="index.jsp" class="logo">
+            <a href="/index.do" class="logo">
                 <img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘"/>
             </a>
             <ul class="reset" id="navheader">
-                <li class="current"><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li class="current"><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a href="h/toForum.jsp" target="_blank">论坛</a></li>
-                <li><a href="jianli.jsp" rel="nofollow">我的简历</a></li>
-                <li><a href="create.jsp" rel="nofollow">发布职位</a></li>
+                <li><a href="/jianli.do" rel="nofollow">我的简历</a></li>
+                <li><a href="/create.do" rel="nofollow">发布职位</a></li>
             </ul>
             <ul class="loginTop">
-                <li><a href="login.jsp" rel="nofollow">登录</a></li>
+                <li><a href="/login.do" rel="nofollow">登录</a></li>
                 <li>|</li>
-                <li><a href="register.jsp" rel="nofollow">注册</a></li>
+                <li><a href="/register.do" rel="nofollow">注册</a></li>
             </ul>
         </div>
     </div><!-- end #header -->
@@ -361,36 +361,15 @@
                             </dt>
                             <dd>
                                 <a href="h/jobs/list_%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label"
-
-                                   class="curr"
-
-                                >产品经理</a>
-                                <a href="h/jobs/list_%E7%BD%91%E9%A1%B5%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label"
-
-
-                                >网页产品经理</a>
-                                <a href="h/jobs/list_%E7%A7%BB%E5%8A%A8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label"
-
-
-                                >移动产品经理</a>
+                                   class="curr">产品经理</a>
+                                <a href="h/jobs/list_%E7%BD%91%E9%A1%B5%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label">网页产品经理</a>
+                                <a href="h/jobs/list_%E7%A7%BB%E5%8A%A8%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label">移动产品经理</a>
                                 <a href="h/jobs/list_%E4%BA%A7%E5%93%81%E5%8A%A9%E7%90%86?labelWords=label"
-
-                                   class="curr"
-
-                                >产品助理</a>
-                                <a href="h/jobs/list_%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label"
-
-
-                                >数据产品经理</a>
-                                <a href="h/jobs/list_%E7%94%B5%E5%95%86%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label"
-
-
-                                >电商产品经理</a>
+                                   class="curr">产品助理</a>
+                                <a href="h/jobs/list_%E6%95%B0%E6%8D%AE%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label">数据产品经理</a>
+                                <a href="h/jobs/list_%E7%94%B5%E5%95%86%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86?labelWords=label">电商产品经理</a>
                                 <a href="h/jobs/list_%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92?labelWords=label"
-
-                                   class="curr"
-
-                                >游戏策划</a>
+                                   class="curr">游戏策划</a>
                             </dd>
                         </dl>
                         <dl class="reset">
@@ -400,14 +379,8 @@
                                 </a>
                             </dt>
                             <dd>
-                                <a href="h/jobs/list_%E7%BD%91%E9%A1%B5%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
-
-
-                                >网页产品设计师</a>
-                                <a href="h/jobs/list_%E6%97%A0%E7%BA%BF%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
-
-
-                                >无线产品设计师</a>
+                                <a href="h/jobs/list_%E7%BD%91%E9%A1%B5%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label">网页产品设计师</a>
+                                <a href="h/jobs/list_%E6%97%A0%E7%BA%BF%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label">无线产品设计师</a>
                             </dd>
                         </dl>
                         <dl class="reset">
@@ -417,14 +390,8 @@
                                 </a>
                             </dt>
                             <dd>
-                                <a href="h/jobs/list_%E4%BA%A7%E5%93%81%E9%83%A8%E7%BB%8F%E7%90%86?labelWords=label"
-
-
-                                >产品部经理</a>
-                                <a href="h/jobs/list_%E4%BA%A7%E5%93%81%E6%80%BB%E7%9B%91?labelWords=label"
-
-
-                                >产品总监</a>
+                                <a href="h/jobs/list_%E4%BA%A7%E5%93%81%E9%83%A8%E7%BB%8F%E7%90%86?labelWords=label">产品部经理</a>
+                                <a href="h/jobs/list_%E4%BA%A7%E5%93%81%E6%80%BB%E7%9B%91?labelWords=label">产品总监</a>
                             </dd>
                         </dl>
                     </div>
@@ -446,32 +413,14 @@
                                 </a>
                             </dt>
                             <dd>
-                                <a href="h/jobs/list_%E8%A7%86%E8%A7%89%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
-
-
-                                >视觉设计师</a>
-                                <a href="h/jobs/list_%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
-
-
-                                >网页设计师</a>
-                                <a href="h/jobs/list_Flash%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
-
-
-                                >Flash设计师</a>
-                                <a href="h/jobs/list_APP%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
-
-
-                                >APP设计师</a>
-                                <a href="h/jobs/list_UI%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
-
-
-                                >UI设计师</a>
+                                <a href="h/jobs/list_%E8%A7%86%E8%A7%89%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label">视觉设计师</a>
+                                <a href="h/jobs/list_%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label">网页设计师</a>
+                                <a href="h/jobs/list_Flash%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label">Flash设计师</a>
+                                <a href="h/jobs/list_APP%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label">APP设计师</a>
+                                <a href="h/jobs/list_UI%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label">UI设计师</a>
                                 <a href="h/jobs/list_%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
-
-
                                 >平面设计师</a>
                                 <a href="h/jobs/list_%E7%BE%8E%E6%9C%AF%E8%AE%BE%E8%AE%A1%E5%B8%88%EF%BC%882D+3D%EF%BC%89?labelWords=label"
-
 
                                 >美术设计师（2D/3D）</a>
                                 <a href="h/jobs/list_%E5%B9%BF%E5%91%8A%E8%AE%BE%E8%AE%A1%E5%B8%88?labelWords=label"
@@ -983,11 +932,11 @@
                     </div>
                 </div>
             </div>
-            <a class="subscribe" href="subscribe.jsp" target="_blank">订阅职位</a>
+            <a class="subscribe" href="/subscribe.do" target="_blank">订阅职位</a>
         </div>
         <div class="content">
             <div id="search_box">
-                <form id="searchForm" name="searchForm" action="list.jsp" method="get">
+                <form id="searchForm" name="searchForm" action="/list.do" method="get">
                     <ul id="searchType">
                         <li data-searchtype="1" class="type_selected">职位</li>
                         <li data-searchtype="4">公司</li>
@@ -1628,7 +1577,7 @@
                         </div>
                     </li>
 
-                    <a href="list.jsp" class="btn fr" target="_blank">查看更多</a>
+                    <a href="/list.do" class="btn fr" target="_blank">查看更多</a>
                 </ul>
                 <ul class="hot_pos hot_posHotPosition reset" style="display:none;">
                     <li class="clearfix">
@@ -2078,8 +2027,8 @@
                                 <li>带薪年假</li>
                             </ul>
                         </div>
-                    </li>22222222222222222222222222222222222
-                    <a href="/WEB-INF/view/list.jsp" class="btn fr" target="_blank">222查看更多</a>
+                    </li>
+                    <a href="/list.do" class="btn fr" target="_blank">查看更多</a>
                 </ul>
             </div>
 
@@ -2161,12 +2110,12 @@
                     <span class="error" style="display:none;" id="beError"></span>
                     <label class="fl" for="remember"><input type="checkbox" id="remember" value="" checked="checked"
                                                             name="autoLogin"/> 记住我</label>
-                    <a href="h/reset.jsp" class="fr">忘记密码？</a>
+                    <a href="/reset.do" class="fr">忘记密码？</a>
                     <input type="submit" id="submitLogin" value="登 &nbsp; &nbsp; 录"/>
                 </form>
                 <div class="login_right">
                     <div>还没有拉勾帐号？</div>
-                    <a href="register.jsp" class="registor_now">立即注册</a>
+                    <a href="/register.do" class="registor_now">立即注册</a>
                     <div class="login_others">使用以下帐号直接登录:</div>
                     <a href="h/ologin/auth/sina.jsp" target="_blank" id="icon_wb" class="icon_wb"
                        title="使用新浪微博帐号登录"></a>
@@ -2185,7 +2134,7 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a href="h/about.jsp" target="_blank" rel="nofollow">联系我们</a>
+        <a href="/about.do" target="_blank" rel="nofollow">联系我们</a>
         <a href="h/af/zhaopin.jsp" target="_blank">互联网公司导航</a>
         <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
         <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>

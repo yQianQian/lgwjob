@@ -48,14 +48,14 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a class="logo" href="index.jsp">
+            <a class="logo" href="/index.do">
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href=/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a target="_blank" href="">论坛</a></li>
-                <li><a rel="nofollow" href="jianli.jsp">我的简历</a></li>
+                <li><a rel="nofollow" href="/jianli.do">我的简历</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -63,19 +63,19 @@
                     <span class="red dn" id="noticeDot-0"></span>
                     <i></i>
                 </dt>
-                <dd style="display: none;"><a rel="nofollow" href="jianli.jsp">我的简历</a></dd>
-                <dd style="display: none;"><a href="collections.jsp">我收藏的职位</a></dd>
-                <dd style="display: none;"><a href="toudi.jsp">我投递的职位 <span id="noticeNo" class="red dn">(0)</span></a>
+                <dd style="display: none;"><a rel="nofollow" href="/jianli.do">我的简历</a></dd>
+                <dd style="display: none;"><a href="/collections.do">我收藏的职位</a></dd>
+                <dd style="display: none;"><a href="/toudi.do">我投递的职位 <span id="noticeNo" class="red dn">(0)</span></a>
                 </dd>
-                <dd class="btm" style="display: none;"><a href="subscribe.jsp">我的订阅</a></dd>
-                <dd style="display: none;"><a href="create.jsp">我要招人</a></dd>
-                <dd style="display: none;"><a href="accountBind.jsp">帐号设置</a></dd>
-                <dd class="logout" style="display: none;"><a rel="nofollow" href="login.jsp">退出</a></dd>
+                <dd class="btm" style="display: none;"><a href="/subscribe.do">我的订阅</a></dd>
+                <dd style="display: none;"><a href="/create.do">我要招人</a></dd>
+                <dd style="display: none;"><a href="/accountBind.do">帐号设置</a></dd>
+                <dd class="logout" style="display: none;"><a rel="nofollow" href="/login.do">退出</a></dd>
             </dl>
             <div class="dn" id="noticeTip">
                 <span class="bot"></span>
                 <span class="top"></span>
-                <a target="_blank" href="delivery.jsp"><strong>0</strong>条新投递反馈</a>
+                <a target="_blank" href="/delivery.do"><strong>0</strong>条新投递反馈</a>
                 <a class="closeNT" href="javascript:;"></a>
             </div>
         </div>
@@ -93,22 +93,22 @@
                         <div class="delivery_tabs">
                             <ul class="reset">
                                 <li class="current">
-                                    <a href="delivery.jsp?tag=-1">全部</a>
+                                    <a href="/delivery.do?tag=-1">全部</a>
                                 </li>
                                 <li>
-                                    <a href="delivery.jsp?tag=5">投递成功</a>
+                                    <a href="/delivery.do?tag=5">投递成功</a>
                                 </li>
                                 <li>
-                                    <a href="delivery.jsp?tag=1">被查看</a>
+                                    <a href="/delivery.do?tag=1">被查看</a>
                                 </li>
                                 <li>
-                                    <a href="delivery.jsp?tag=2">通过初筛</a>
+                                    <a href="/delivery.do?tag=2">通过初筛</a>
                                 </li>
                                 <li>
-                                    <a href="delivery.jsp?tag=3">通知面试</a>
+                                    <a href="/delivery.do?tag=3">通知面试</a>
                                 </li>
                                 <li class="last">
-                                    <a href="delivery.jsp?tag=4">不合适</a>
+                                    <a href="/delivery.do?tag=4">不合适</a>
                                 </li>
                             </ul>
                         </div>
@@ -186,14 +186,14 @@
             <div class="content_r">
                 <div class="mycenterR" id="myInfo">
                     <h2>我的信息</h2>
-                    <a href="collections.jsp">我收藏的职位</a>
+                    <a href="/collections.do">我收藏的职位</a>
                     <br>
-                    <a href="toudi.jsp" target="_blank">我投递的职位<span id="noticeNoPage"
+                    <a href="/toudi.do" target="_blank">我投递的职位<span id="noticeNoPage"
                                                                     class="red dn">&nbsp;(0)</span></a>
                     <br>
-                    <a target="_blank" href="subscribe.jsp">我订阅的职位</a>
+                    <a target="_blank" href="/subscribe.do">我订阅的职位</a>
                     <br>
-                    <a target="_blank" href="mList.jsp">我的职位推荐</a>
+                    <a target="_blank" href="/mList.do">我的职位推荐</a>
                 </div><!--end #myInfo-->
                 <div class="mycenterR" id="myRecommend">
                     <h2>可能适合你的职位 <i>匹配度</i></h2>
@@ -234,7 +234,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a target="_blank" class="more" href="mList.jsp">更多推荐职位&gt;&gt;</a>
+                    <a target="_blank" class="more" href="/mList.do">更多推荐职位&gt;&gt;</a>
                 </div><!--end #myRecommend-->
                 <div class="greybg qrcode mt20">
                     <img width="242" height="242" alt="拉勾微信公众号二维码" src="style/images/qr_delivery.png">
@@ -353,7 +353,7 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="about.jsp">联系我们</a>
+        <a rel="nofollow" target="_blank" href="/about.do">联系我们</a>
         <a target="_blank" href="http://www.lagou.com/af/zhaopin.jsp">互联网公司导航</a>
         <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
         <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>
@@ -393,14 +393,14 @@
                 if (notice.status[0] == 0) {
                     $('#noticeDot-0').hide();
                     $('#noticeTip').hide();
-                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/delivery.do');
                 } else {
                     $('#noticeDot-0').show();
                     $('#noticeTip strong').text(notice.status[0]);
                     $('#noticeTip').show();
-                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
                 }
                 $('#noticeDot-1').hide();
             };

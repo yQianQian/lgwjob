@@ -38,7 +38,7 @@
     <script src="style/js/conv.js" type="text/javascript"></script>
     <script src="style/js/ajaxCross.json" charset="UTF-8"></script>
     <style type="text/css">.BMap_mask {
-        background: transparent url(style/images/img/blank.gif);
+        background: transparent url(/style/images/img/blank.gif);
     }
 
     .BMap_noscreen {
@@ -50,7 +50,7 @@
     }
 
     .BMap_zoomer {
-        background-image: url(style/images/img/mapctrls1d3.gif);
+        background-image: url(/style/images/img/mapctrls1d3.gif);
         background-repeat: no-repeat;
         overflow: hidden;
         font-size: 1px;
@@ -67,7 +67,7 @@
         width: 44px;
         height: 44px;
         overflow: hidden;
-        background: url(style/images/img/mapctrls2d0.png) no-repeat;
+        background: url(/style/images/img/mapctrls2d0.png) no-repeat;
     }
 
     .BMap_ie6 .BMap_stdMpPan {
@@ -78,7 +78,7 @@
         left: 0;
         width: 44px;
         height: 464px;
-        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="style/images/img/mapctrls2d0.png");
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/style/images/img/mapctrls2d0.png");
     }
 
     .BMap_ie6 .BMap_stdMpPanBg {
@@ -124,7 +124,7 @@
         height: 21px;
         left: 12px;
         overflow: hidden;
-        background-image: url(style/images/img/mapctrls2d0.png);
+        background-image: url(/style/images/img/mapctrls2d0.png);
         background-repeat: no-repeat;
         z-index: 10;
     }
@@ -169,7 +169,7 @@
 
     .BMap_stdMpType4 .BMap_smcbg {
         position: static;
-        background: url(style/images/img/mapctrls2d0_mb.png) 0 0 no-repeat;
+        background: url(/style/images/img/mapctrls2d0_mb.png) 0 0 no-repeat;
         -webkit-background-size: 24px 32px;
     }
 
@@ -202,7 +202,7 @@
         left: 18px;
         width: 10px;
         overflow: hidden;
-        background: url(style/images/img/mapctrls2d0.png) no-repeat -23px -226px;
+        background: url(/style/images/img/mapctrls2d0.png) no-repeat -23px -226px;
     }
 
     .BMap_stdMpSliderBgBot {
@@ -211,7 +211,7 @@
         width: 10px;
         top: 124px;
         overflow: hidden;
-        background: url(style/images/img/mapctrls2d0.png) no-repeat -33px bottom;
+        background: url(/style/images/img/mapctrls2d0.png) no-repeat -33px bottom;
     }
 
     .BMap_ie6 .BMap_stdMpSliderBgTop, .BMap_ie6 .BMap_stdMpSliderBgBot {
@@ -241,11 +241,11 @@
         left: 13px;
         top: 80px;
         overflow: hidden;
-        background: url(style/images/img/mapctrls2d0.png) no-repeat 0 -309px;
+        background: url(/style/images/img/mapctrls2d0.png) no-repeat 0 -309px;
     }
 
     .BMap_stdMpSliderBar.h {
-        background: url(style/images/img/mapctrls2d0.png) no-repeat 0 -320px;
+        background: url(/style/images/img/mapctrls2d0.png) no-repeat 0 -320px;
     }
 
     .BMap_ie6 .BMap_stdMpSliderBar, .BMap_ie6 .BMap_stdMpSliderBar.h {
@@ -265,7 +265,7 @@
         left: 34px;
         height: 21px;
         width: 28px;
-        background-image: url(style/images/img/mapctrls2d0.png);
+        background-image: url(/style/images/img/mapctrls2d0.png);
         background-repeat: no-repeat;
         font-size: 0;
         cursor: pointer;
@@ -467,7 +467,7 @@
         position: absolute;
         cursor: pointer;
         overflow: hidden;
-        background: url(style/images/img/mapctrls1d3.gif) no-repeat;
+        background: url(/images/img/mapctrls1d3.gif) no-repeat;
         z-index: 1210;
     }
 
@@ -589,7 +589,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: transparent url(style/images/img/blank.gif);
+        background: transparent url(/style/images/img/blank.gif);
         z-index: 1000;
     }
 
@@ -661,7 +661,7 @@
     }
 
     .BMap_checkbox {
-        background: url(style/images/img/mapctrls1d3.gif);
+        background: url(/style/images/img/mapctrls1d3.gif);
         vertical-align: middle;
         display: inline-block;
         width: 11px;
@@ -706,11 +706,11 @@
     }
 
     .BMap_vectex_nodeT {
-        background-image: url(style/images/img/nodeT.gif);
+        background-image: url(/style/images/img/nodeT.gif);
     }
 
     .BMap_vectex_node {
-        background-image: url(style/images/img/node.gif);
+        background-image: url(/style/images/img/node.gif);
     }
 
     .iw {
@@ -805,12 +805,12 @@
     }
 
     .iw_search, .iw_l {
-        background: url("style/images/img/u20LgruGtNFM8lqnNtfK2JqN3CVeW1gzWj9jThd0xd59R8BBgAAiefGO1Bt1gAAAABJRU5ErkJggg==") no-repeat 50% 50%;
+        background: url("/style/images/img/u20LgruGtNFM8lqnNtfK2JqN3CVeW1gzWj9jThd0xd59R8BBgAAiefGO1Bt1gAAAABJRU5ErkJggg==") no-repeat 50% 50%;
         -webkit-background-size: 19px 19px;
     }
 
     .iw_line_s, .iw_r {
-        background: url("style/images/img/wCKLRHq20vjSoVNKWunH4rTBDv5Cv7NKeKfvvU2nINzHAuexzUA7KQTkoB6UxDicKvcqfQQYABaiUBxugCsr20AAAAAElFTkSuQmCC") no-repeat 50% 50%;
+        background: url("/style/images/img/wCKLRHq20vjSoVNKWunH4rTBDv5Cv7NKeKfvvU2nINzHAuexzUA7KQTkoB6UxDicKvcqfQQYABaiUBxugCsr20AAAAAElFTkSuQmCC") no-repeat 50% 50%;
         -webkit-background-size: 19px 19px;
     }
 
@@ -936,7 +936,7 @@
         _right: -1px;
         width: 14px;
         height: 13px;
-        background: url(style/images/img/addrPage.png) no-repeat 0 -121px;
+        background: url(/style/images/img/addrPage.png) no-repeat 0 -121px;
         cursor: pointer;
     }
 
@@ -962,7 +962,7 @@
     }
 
     .sel_n .sel_top {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -418px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -418px;
         height: 4px;
         font-size: 0px;
     }
@@ -970,7 +970,7 @@
     .sel_n .sel_body_top {
         height: 32px;
         width: 100%;
-        background: url(style/images/img/addrPage.png) no-repeat 0 -41px;
+        background: url(/style/images/img/addrPage.png) no-repeat 0 -41px;
     }
 
     .sel_n .sel_body_title {
@@ -984,7 +984,7 @@
         width: 30px;
         height: 31px;
         float: left;
-        background: url(style/images/img/bgs.gif) no-repeat -79px -387px;
+        background: url(/style/images/img/bgs.gif) no-repeat -79px -387px;
     }
 
     .sel_n .sel_body_name {
@@ -1005,7 +1005,7 @@
     }
 
     .sel_n .sel_bottom {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -415px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -415px;
         height: 4px;
         font-size: 0px;
     }
@@ -1021,7 +1021,7 @@
     }
 
     .sel_n1 .sel_top {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -418px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -418px;
         height: 4px;
         font-size: 0px;
     }
@@ -1029,13 +1029,13 @@
     .sel_n1 .sel_body_top {
         height: 31px;
         width: 100%;
-        background: url(style/images/img/sel_body_n_top.gif) repeat-x;
+        background: url(/style/images/img/sel_body_n_top.gif) repeat-x;
     }
 
     .sel_n1 .sel_body_top {
         height: 32px;
         width: 100%;
-        background: url(style/images/img/addrPage.png) no-repeat 0 -41px
+        background: url(/style/images/img/addrPage.png) no-repeat 0 -41px
     }
 
     .sel_n1 .sel_body_title {
@@ -1050,7 +1050,7 @@
         width: 30px;
         height: 31px;
         float: left;
-        background: url(style/images/img/bgs.gif) no-repeat -79px -387px;
+        background: url(/style/images/img/bgs.gif) no-repeat -79px -387px;
     }
 
     .sel_n1 .sel_body_name {
@@ -1065,7 +1065,7 @@
         width: 20px;
         height: 31px;
         margin-left: -23px;
-        background: url(style/images/img/bgs.gif) no-repeat -253px -382px;
+        background: url(/style/images/img/bgs.gif) no-repeat -253px -382px;
         overflow: hidden;
         zoom: 1;
         cursor: pointer;
@@ -1080,7 +1080,7 @@
     }
 
     .sel_n1 .sel_bottom {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -415px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -415px;
         height: 4px;
         font-size: 0px;
     }
@@ -1091,7 +1091,7 @@
     }
 
     .sel_y .sel_top {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -439px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -439px;
         height: 4px;
         zoom: 1;
         font-size: 0px;
@@ -1100,7 +1100,7 @@
     .sel_y .sel_body_top {
         height: 32px;
         width: 100%;
-        background: url(style/images/img/addrPage.png) no-repeat 0 0
+        background: url(/style/images/img/addrPage.png) no-repeat 0 0
     }
 
     .sel_y .sel_body_title {
@@ -1115,7 +1115,7 @@
         width: 30px;
         height: 31px;
         float: left;
-        background: url(style/images/img/bgs.gif) no-repeat -167px -384px;
+        background: url(/style/images/img/bgs.gif) no-repeat -167px -384px;
     }
 
     .sel_y .sel_body_name {
@@ -1130,7 +1130,7 @@
         width: 20px;
         height: 31px;
         margin-left: -20px;
-        background: url(style/images/img/bgs.gif) no-repeat -269px -297px;
+        background: url(/style/images/img/bgs.gif) no-repeat -269px -297px;
         cursor: pointer;
     }
 
@@ -1147,7 +1147,7 @@
     }
 
     .sel_y .sel_bottom {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -436px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -436px;
         height: 4px;
         font-size: 0px;
     }
@@ -1164,7 +1164,7 @@
     }
 
     .sel_x .sel_top {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -418px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -418px;
         height: 4px;
         font-size: 0px;
     }
@@ -1172,7 +1172,7 @@
     .sel_x .sel_body_top {
         height: 32px;
         width: 100%;
-        background: url(style/images/img/addrPage.png) no-repeat 0 -41px;
+        background: url(/style/images/img/addrPage.png) no-repeat 0 -41px;
     }
 
     .sel_x .sel_body_title {
@@ -1186,7 +1186,7 @@
         width: 30px;
         height: 31px;
         float: left;
-        background: url(style/images/img/bgs.gif) no-repeat -122px -384px;
+        background: url(/style/images/img/bgs.gif) no-repeat -122px -384px;
     }
 
     .sel_x .sel_body_name {
@@ -1214,7 +1214,7 @@
     }
 
     .sel_x .sel_bottom {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -415px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -415px;
         height: 4px;
         font-size: 0px;
     }
@@ -1226,7 +1226,7 @@
     }
 
     .sel_x1 .sel_top {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -418px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -418px;
         height: 4px;
         font-size: 0px;
     }
@@ -1234,7 +1234,7 @@
     .sel_x1 .sel_body_top {
         height: 32px;
         width: 100%;
-        background: url(style/images/img/addrPage.png) no-repeat 0 -41px
+        background: url(/style/images/img/addrPage.png) no-repeat 0 -41px
     }
 
     .sel_x1 .sel_body_title {
@@ -1249,7 +1249,7 @@
         width: 30px;
         height: 31px;
         float: left;
-        background: url(style/images/img/bgs.gif) no-repeat -122px -384px;
+        background: url(/style/images/img/bgs.gif) no-repeat -122px -384px;
     }
 
     .sel_x1 .sel_body_name {
@@ -1280,7 +1280,7 @@
     }
 
     .sel_x1 .sel_bottom {
-        background: url(style/images/img/bgs.gif) no-repeat 0 -415px;
+        background: url(/style/images/img/bgs.gif) no-repeat 0 -415px;
         height: 4px;
         font-size: 0px;
     }
@@ -1313,7 +1313,7 @@
     }
 
     .sel_body_resitem th div.iconbg {
-        background: url(style/images/img/markers_new_ie6.png) no-repeat scroll 0 0;
+        background: url(/style/images/img/markers_new_ie6.png) no-repeat scroll 0 0;
         height: 29px;
         width: 24px;
     }
@@ -1393,7 +1393,7 @@
     .sel_body_resitem td .selBtn {
         width: 70px;
         height: 29px;
-        background: url(style/images/img/addrPage.png) no-repeat -21px -81px;
+        background: url(/style/images/img/addrPage.png) no-repeat -21px -81px;
         text-align: center;
         line-height: 29px;
         visibility: hidden;
@@ -1417,7 +1417,7 @@
     .selInfoWndBtn {
         width: 70px;
         height: 29px;
-        background: url(style/images/img/addrPage.png) no-repeat -21px -81px;
+        background: url(/style/images/img/addrPage.png) no-repeat -21px -81px;
         text-align: center;
         line-height: 29px;
         margin: 0 auto;
@@ -1440,17 +1440,17 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a class="logo" href="index.jsp">
+            <a class="logo" href="/index.do">
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a target="_blank" href="">论坛</a></li>
                 <li>
                     <a rel="nofollow" href="">简历管理</a>
                 </li>
-                <li class="current"><a rel="nofollow" href="create.jsp">发布职位</a></li>
+                <li class="current"><a rel="nofollow" href="/create.do">发布职位</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -1458,44 +1458,44 @@
                     <span class="red dn" id="noticeDot-1"></span>
                     <i></i>
                 </dt>
-                <dd style="display: none;"><a href="positions.jsp">我发布的职位</a></dd>
-                <dd style="display: none;"><a href="positions.jsp">我收到的简历</a></dd>
-                <dd class="btm" style="display: none;"><a href="myhome.jsp">我的公司主页</a></dd>
-                <dd style="display: none;"><a href="jianli.jsp">我要找工作</a></dd>
-                <dd style="display: none;"><a href="accountBind.jsp">帐号设置</a></dd>
-                <dd class="logout" style="display: none;"><a rel="nofollow" href="login.jsp">退出</a></dd>
+                <dd style="display: none;"><a href="/positions.do">我发布的职位</a></dd>
+                <dd style="display: none;"><a href="/positions.do">我收到的简历</a></dd>
+                <dd class="btm" style="display: none;"><a href="/myhome.do">我的公司主页</a></dd>
+                <dd style="display: none;"><a href="/jianli.do">我要找工作</a></dd>
+                <dd style="display: none;"><a href="/accountBind.do">帐号设置</a></dd>
+                <dd class="logout" style="display: none;"><a rel="nofollow" href="/login.do">退出</a></dd>
             </dl>
         </div>
     </div><!-- end #header -->
     <div id="container">
 
         <div class="sidebar">
-            <a class="btn_create" href="create.jsp">发布新职位</a>
+            <a class="btn_create" href="/create.do">发布新职位</a>
             <dl class="company_center_aside">
                 <dt>我收到的简历</dt>
                 <dd>
                     <a href="">待处理简历</a>
                 </dd>
                 <dd>
-                    <a href="canInterviewResumes.jsp">待定简历</a>
+                    <a href="/canInterviewResumes.do">待定简历</a>
                 </dd>
                 <dd>
-                    <a href="haveNoticeResumes.jsp">已通知面试简历</a>
+                    <a href="/haveNoticeResumes.do">已通知面试简历</a>
                 </dd>
                 <dd>
-                    <a href="haveRefuseResumes.jsp">不合适简历</a>
+                    <a href="/haveRefuseResumes.do">不合适简历</a>
                 </dd>
                 <dd class="btm">
-                    <a href="autoFilterResumes.jsp">自动过滤简历</a>
+                    <a href="/autoFilterResumes.do">自动过滤简历</a>
                 </dd>
             </dl>
             <dl class="company_center_aside">
                 <dt>我发布的职位</dt>
                 <dd>
-                    <a href="positions.jsp">有效职位</a>
+                    <a href="/positions.do">有效职位</a>
                 </dd>
                 <dd>
-                    <a href="positions.jsp">已下线职位</a>
+                    <a href="/positions.do">已下线职位</a>
                 </dd>
             </dl>
             <div class="subscribe_side mt20">
@@ -1520,7 +1520,7 @@
                 </dt>
                 <dd>
                     <div class="ccc_tr">今日已发布 <span>0</span> 个职位 还可发布 <span>5</span> 个职位</div>
-                    <form action="http://www.lagou.com/corpPosition/preview.jsp" method="post" id="jobForm">
+                    <form action="/preview.do" method="post" id="jobForm">
                         <input type="hidden" value="" name="id">
                         <input type="hidden" value="create" name="preview">
                         <input type="hidden" value="25927" name="companyId">
@@ -2361,15 +2361,14 @@
                         </div>
                         <div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 3;"></div>
                     </div>
-                    <div style="position: absolute; z-index: 1201; top: 10px; right: 10px; width: 17px; height: 16px; background: url(style/images/img/st-close.pngquot) no-repeat scroll 0% 0% transparent; cursor: pointer; display: none;"
+                    <div style="position: absolute; z-index: 1201; top: 10px; right: 10px; width: 17px; height: 16px; background: url(/style/images/img/st-close.pngquot) no-repeat scroll 0% 0% transparent; cursor: pointer; display: none;"
                          title="退出全景"></div>
                     <div style="height: 32px; position: absolute; z-index: 30; -moz-user-select: none; bottom: 0px; right: auto; top: auto; left: 1px; display: none;"
                          class=" anchorBL"><a title="到百度地图查看此区域" target="_blank" href="http://map.baidu.com/?sr=1"
                                               style="outline: medium none;"><img src="style/images/copyright_logo.png"
                                                                                  style="border:none;width:77px;height:32px"></a>
                     </div>
-                    <div style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:-moz-grab"
-                         id="zoomer">
+                    <div style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:-moz -grab;" id="zoomer">
                         <div style="top:0;left:0;" class="BMap_zoomer"></div>
                         <div style="top:0;right:0;" class="BMap_zoomer"></div>
                         <div style="bottom:0;left:0;" class="BMap_zoomer"></div>
@@ -2690,7 +2689,7 @@ $(function(){
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="about.jsp">联系我们</a>
+        <a rel="nofollow" target="_blank" href="/about.do">联系我们</a>
         <a target="_blank" href="http://www.lagou.com/af/zhaopin.jsp">互联网公司导航</a>
         <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
         <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>

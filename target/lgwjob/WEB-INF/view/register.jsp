@@ -78,7 +78,7 @@
         </form>
         <div class="login_right">
             <div>已有拉勾帐号</div>
-            <a href="login.jsp" class="registor_now">直接登录</a>
+            <a href="/login.do" class="registor_now">直接登录</a>
             <div class="login_others">使用以下帐号直接登录:</div>
             <a href="h/ologin/auth/sina.jsp" target="_blank" class="icon_wb" title="使用新浪微博帐号登录"></a>
             <a href="h/ologin/auth/qq.jsp" class="icon_qq" target="_blank" title="使用腾讯QQ帐号登录"></a>

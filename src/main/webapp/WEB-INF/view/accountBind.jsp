@@ -52,13 +52,13 @@
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a target="_blank" href="h/toForum.jsp">论坛</a></li>
                 <li>
-                    <a rel="nofollow" href="positions.jsp">简历管理</a>
+                    <a rel="nofollow" href="/positions.do">简历管理</a>
                 </li>
-                <li><a rel="nofollow" href="create.jsp">发布职位</a></li>
+                <li><a rel="nofollow" href="/create.do">发布职位</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -66,12 +66,12 @@
                     <span class="red dn" id="noticeDot-1"></span>
                     <i></i>
                 </dt>
-                <dd style="display: none;"><a href="positions.jsp">我发布的职位</a></dd>
-                <dd style="display: none;"><a href="positions.jsp">我收到的简历</a></dd>
-                <dd class="btm" style="display: none;"><a href="myhome.jsp">我的公司主页</a></dd>
-                <dd style="display: none;"><a href="list.jsp">我要找工作</a></dd>
-                <dd style="display: none;"><a href="accountBind.jsp">帐号设置</a></dd>
-                <dd class="logout" style="display: none;"><a rel="nofollow" href="login.jsp">退出</a></dd>
+                <dd style="display: none;"><a href="/positions.do">我发布的职位</a></dd>
+                <dd style="display: none;"><a href="/positions.do">我收到的简历</a></dd>
+                <dd class="btm" style="display: none;"><a href="/myhome.do">我的公司主页</a></dd>
+                <dd style="display: none;"><a href="/list.do">我要找工作</a></dd>
+                <dd style="display: none;"><a href="/accountBind.do">帐号设置</a></dd>
+                <dd class="logout" style="display: none;"><a rel="nofollow" href="/login.do">退出</a></dd>
             </dl>
         </div>
     </div><!-- end #header -->
@@ -79,8 +79,8 @@
         <div class="user_bindSidebar">
             <dl id="user_sideBarmenu" class="user_sideBarmenu">
                 <dt><h3>帐号设置</h3></dt>
-                <dd><a class="hover" href="accountBind.jsp">帐号绑定</a></dd>
-                <dd><a href="updatePwd.jsp">修改密码</a></dd>
+                <dd><a class="hover" href="/accountBind.do">帐号绑定</a></dd>
+                <dd><a href="/updatePwd.do">修改密码</a></dd>
             </dl>
         </div>
         <input type="hidden" id="hasSidebar" value="1">
@@ -164,7 +164,7 @@
                     <tr>
                         <td align="center">
                             <a id="user_confirmBindTips" class="btn" href="javascript:;"><!-- 换个邮箱绑定 --></a>
-                            <a class="cancel" href="login.jsp">退出当前帐号</a>
+                            <a class="cancel" href="/login.do">退出当前帐号</a>
                         </td>
                     </tr>
                     </tbody>
@@ -264,14 +264,14 @@
             <div style="overflow:hidden" class="popup" id="updatePassword">
                 <h3>修改密码成功，请重新登录</h3>
                 <h4><span>5</span>秒后将自动退出</h4>
-                <a class="btn" href="login.jsp">直接退出</a>
+                <a class="btn" href="/login.do">直接退出</a>
             </div>
 
             <!-- 解除招聘服务 -->
             <div style="overflow:hidden" class="popup" id="unbindService">
                 <h3>与当前公司的招聘服务解除成功！</h3>
                 <h4><span>5</span>秒后页面将自动跳转至开通招聘服务页</h4>
-                <a class="btn" href="h/corpCenter/bindStep1.jsp">立即跳转</a>
+                <a class="btn" href="/bindStep1.do">立即跳转</a>
             </div>
             <div style="overflow:hidden" class="popup" id="confirm_unbindService">
                 <h3>确认解除与当前公司的招聘服务吗？</h3>
@@ -297,7 +297,7 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="h/about.jsp">联系我们</a>
+        <a rel="nofollow" target="_blank" href="/about.do">联系我们</a>
         <a target="_blank" href="h/af/zhaopin.jsp">互联网公司导航</a>
         <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
         <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>

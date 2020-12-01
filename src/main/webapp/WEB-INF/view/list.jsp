@@ -45,20 +45,20 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a href="index.jsp" class="logo">
+            <a href="/index.do" class="logo">
                 <img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘"/>
             </a>
             <ul class="reset" id="navheader">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
-                <li><a href="h/toForum.jsp" target="_blank">论坛</a></li>
-                <li><a href="jianli.jsp" rel="nofollow">我的简历</a></li>
-                <li><a href="create.jsp" rel="nofollow">发布职位</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
+                <li><a href="h/toForum.d" target="_blank">论坛</a></li>
+                <li><a href="/jianli.do" rel="nofollow">我的简历</a></li>
+                <li><a href="/create.do" rel="nofollow">发布职位</a></li>
             </ul>
             <ul class="loginTop">
-                <li><a href="login.jsp" rel="nofollow">登录</a></li>
+                <li><a href="/login.do" rel="nofollow">登录</a></li>
                 <li>|</li>
-                <li><a href="register.jsp" rel="nofollow">注册</a></li>
+                <li><a href="/register.do" rel="nofollow">注册</a></li>
             </ul>
         </div>
     </div><!-- end #header -->
@@ -151,7 +151,7 @@
 
         <div class="content">
             <div id="search_box">
-                <form id="searchForm" name="searchForm" action="list.jsp" method="get">
+                <form id="searchForm" name="searchForm" action="/list.do" method="get">
                     <ul id="searchType">
                         <li data-searchtype="1" class="type_selected">职位</li>
                         <li data-searchtype="4">公司</li>
@@ -372,7 +372,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/1712.jsp" title="紫色医疗" target="_blank">紫色医疗</a></div>
                         <span><em class="c7">领域： </em>移动互联网 ,健康医疗</span>
@@ -405,7 +405,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/7626.jsp" title="网利宝" target="_blank">网利宝</a></div>
                         <span><em class="c7">领域： </em>O2O,金融互联网</span>
@@ -438,7 +438,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/9725.jsp" title="淘米" target="_blank">淘米</a></div>
                         <span><em class="c7">领域： </em>游戏</span>
@@ -469,7 +469,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/3228.jsp" title="艾特互动" target="_blank">艾特互动</a></div>
                         <span><em class="c7">领域： </em>移动互联网,社会化营销</span>
@@ -502,7 +502,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/6922.jsp" title="快车道数据科技" target="_blank">快车道数据科技</a></div>
                         <span><em class="c7">领域： </em>云计算\大数据,分类信息</span>
@@ -535,7 +535,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/9983.jsp" title="永灿" target="_blank">永灿</a></div>
                         <span><em class="c7">领域： </em>移动互联网,电子商务</span>
@@ -568,7 +568,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/9983.jsp" title="永灿" target="_blank">永灿</a></div>
                         <span><em class="c7">领域： </em>移动互联网,电子商务</span>
@@ -601,7 +601,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/10763.jsp" title="鲜旅科技" target="_blank">鲜旅科技</a></div>
                         <span><em class="c7">领域： </em>O2O</span>
@@ -665,7 +665,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/1335.jsp" title="堆糖网" target="_blank">堆糖网</a></div>
                         <span><em class="c7">领域： </em>移动互联网,生活服务</span>
@@ -697,7 +697,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/8143.jsp" title="途家网" target="_blank">途家网</a></div>
                         <span><em class="c7">领域： </em>移动互联网,O2O</span>
@@ -730,7 +730,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/8143.jsp" title="途家网" target="_blank">途家网</a></div>
                         <span><em class="c7">领域： </em>移动互联网,O2O</span>
@@ -763,7 +763,7 @@
                     </div>
                     <div class="hot_pos_r">
                         <div class="apply">
-                            <a href="toudi.jsp" target="_blank">投个简历</a>
+                            <a href="/toudi.do" target="_blank">投个简历</a>
                         </div>
                         <div class="mb10"><a href="h/c/3786.jsp" title="宜信公司" target="_blank">宜信公司</a></div>
                         <span><em class="c7">领域： </em>移动互联网,金融互联网</span>
@@ -968,7 +968,7 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a href="h/about.jsp" target="_blank" rel="nofollow">联系我们</a>
+        <a href="/about.do" target="_blank" rel="nofollow">联系我们</a>
         <a href="h/af/zhaopin.jsp" target="_blank">互联网公司导航</a>
         <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
         <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>

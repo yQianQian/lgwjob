@@ -2,11 +2,7 @@
 <!DOCTYPE HTML>
 <html xmlns:wb="http://open.weibo.com/wb">
 <head>
-    </script><
-script
-type = "text/javascript"
-async = ""
-src = "style/js/conversion.js" ></script>
+    <script type = "text/javascript" async = "" src = "style/js/conversion.js" ></script>
     <script src="style/js/allmobilize.min.js" charset="utf-8" id="allmobilize"></script>
     <style type="text/css"></style>
     <meta content="no-siteapp" http-equiv="Cache-Control">
@@ -46,14 +42,14 @@ src = "style/js/conversion.js" ></script>
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a class="logo" href="index.jsp">
+            <a class="logo" href="/index.do">
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a target="_blank" href="">论坛</a></li>
-                <li><a rel="nofollow" href="jianli.jsp">我的简历</a></li>
+                <li><a rel="nofollow" href="/jianli.do">我的简历</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -61,18 +57,18 @@ src = "style/js/conversion.js" ></script>
                     <span class="red dn" id="noticeDot-0"></span>
                     <i></i>
                 </dt>
-                <dd><a rel="nofollow" href="jianli.jsp">我的简历</a></dd>
-                <dd><a href="collections.jsp">我收藏的职位</a></dd>
-                <dd><a href="delivery.jsp">我投递的职位 <span id="noticeNo" class="red dn">(0)</span></a></dd>
-                <dd class="btm"><a href="subscribe.jsp">我的订阅</a></dd>
-                <dd><a href="create.jsp">我要招人</a></dd>
-                <dd><a href="accountBind.jsp">帐号设置</a></dd>
-                <dd class="logout"><a rel="nofollow" href="login.jsp">退出</a></dd>
+                <dd><a rel="nofollow" href="/jianli.do">我的简历</a></dd>
+                <dd><a href="/collections.do">我收藏的职位</a></dd>
+                <dd><a href="/delivery.do">我投递的职位 <span id="noticeNo" class="red dn">(0)</span></a></dd>
+                <dd class="btm"><a href="/subscribe.do">我的订阅</a></dd>
+                <dd><a href="/create.do">我要招人</a></dd>
+                <dd><a href="/accountBind.do">帐号设置</a></dd>
+                <dd class="logout"><a rel="nofollow" href="/login.do">退出</a></dd>
             </dl>
             <div class="dn" id="noticeTip">
                 <span class="bot"></span>
                 <span class="top"></span>
-                <a target="_blank" href="delivery.jsp"><strong>0</strong>条新投递反馈</a>
+                <a target="_blank" href="/delivery.do"><strong>0</strong>条新投递反馈</a>
                 <a class="closeNT" href="javascript:;"></a>
             </div>
         </div>
@@ -603,7 +599,7 @@ src = "style/js/conversion.js" ></script>
                 <table width="100%">
                     <tbody>
                     <tr>
-                        <td align="center"><a class="btn_s" href="subscribe.jsp">确&nbsp;定</a></td>
+                        <td align="center"><a class="btn_s" href="/subscribe.do">确&nbsp;定</a></td>
                     </tr>
                     </tbody>
                 </table>
@@ -680,12 +676,12 @@ src = "style/js/conversion.js" ></script>
                     <span id="beError" style="display:none;" class="error"></span>
                     <label for="remember" class="fl"><input type="checkbox" name="autoLogin" checked="checked" value=""
                                                             id="remember"> 记住我</label>
-                    <a target="_blank" class="fr" href="http://www.lagou.com/reset.jsp">忘记密码？</a>
+                    <a target="_blank" class="fr" href="/reset.do">忘记密码？</a>
                     <input type="submit" value="登 &nbsp; &nbsp; 录" id="submitLogin">
                 </form>
                 <div class="login_right">
                     <div>还没有拉勾帐号？</div>
-                    <a class="registor_now" href="http://www.lagou.com/register.jsp">立即注册</a>
+                    <a class="registor_now" href="/register.do">立即注册</a>
                     <div class="login_others">使用以下帐号直接登录:</div>
                     <a title="使用新浪微博帐号登录" class="icon_wb" target="_blank"
                        href="http://www.lagou.com/ologin/auth/sina.jsp"></a>
@@ -729,7 +725,7 @@ src = "style/js/conversion.js" ></script>
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="about.jsp">联系我们</a>
+        <a rel="nofollow" target="_blank" href="/about.do">联系我们</a>
         <a target="_blank" href="http://www.lagou.com/af/zhaopin.jsp">互联网公司导航</a>
         <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
         <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>
@@ -769,14 +765,14 @@ src = "style/js/conversion.js" ></script>
                 if (notice.status[0] == 0) {
                     $('#noticeDot-0').hide();
                     $('#noticeTip').hide();
-                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/delivery.do');
                 } else {
                     $('#noticeDot-0').show();
                     $('#noticeTip strong').text(notice.status[0]);
                     $('#noticeTip').show();
-                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
                 }
                 $('#noticeDot-1').hide();
             };

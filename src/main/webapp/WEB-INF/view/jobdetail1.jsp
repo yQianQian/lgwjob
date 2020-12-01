@@ -1471,14 +1471,14 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a class="logo" href="index.jsp">
+            <a class="logo" href="/index.do">
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a target="_blank" href="toForum.jsp">论坛</a></li>
-                <li><a rel="nofollow" href="jianli.jsp">我的简历</a></li>
+                <li><a rel="nofollow" href="/jianli.do">我的简历</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -1486,18 +1486,18 @@
                     <span class="red dn" id="noticeDot-0"></span>
                     <i></i>
                 </dt>
-                <dd><a rel="nofollow" href="jianli.jsp">我的简历</a></dd>
-                <dd><a href="collections.jsp">我收藏的职位</a></dd>
-                <dd><a href="delivery.jsp">我投递的职位 <span id="noticeNo" class="red dn">(0)</span></a></dd>
-                <dd class="btm"><a href="subscribe.jsp">我的订阅</a></dd>
+                <dd><a rel="nofollow" href="/jianli.do">我的简历</a></dd>
+                <dd><a href="/collections.do">我收藏的职位</a></dd>
+                <dd><a href="/delivery.do">我投递的职位 <span id="noticeNo" class="red dn">(0)</span></a></dd>
+                <dd class="btm"><a href="/subscribe.do">我的订阅</a></dd>
                 <dd><a href="">我要招人</a></dd>
-                <dd><a href="accountBind.jsp">帐号设置</a></dd>
-                <dd class="logout"><a rel="nofollow" href="login.jsp">退出</a></dd>
+                <dd><a href="/accountBind.do">帐号设置</a></dd>
+                <dd class="logout"><a rel="nofollow" href="/login.do">退出</a></dd>
             </dl>
             <div class="dn" id="noticeTip">
                 <span class="bot"></span>
                 <span class="top"></span>
-                <a target="_blank" href="delivery.jsp"><strong>0</strong>条新投递反馈</a>
+                <a target="_blank" href="/delivery.do"><strong>0</strong>条新投递反馈</a>
                 <a class="closeNT" href="javascript:;"></a>
             </div>
         </div>
@@ -1517,7 +1517,7 @@
                         <div class="jd_collection" id="jobCollection">
                             <div class="jd_collection_success">
                                 <span>已成功收藏该职位，</span>
-                                <a class="jd_collection_page" href="mycenter/collections.jsp">查看全部</a>
+                                <a class="jd_collection_page" href="/collections.do">查看全部</a>
                                 <a class="jd_collection_x" href="javascript:;"></a>
                             </div>
                         </div>
@@ -1583,7 +1583,7 @@
                     <!-- 用户是否激活 0-否；1-是 -->
                     <dd class="resume resume_web">
                         <div style="width:400px;">
-                            <span> 你已设置默认投递简历：<a title="jason的简历" target="_blank" href="resume/myresume.jsp"><strong>在线简历：jason的简历</strong></a></span><br>
+                            <span> 你已设置默认投递简历：<a title="jason的简历" target="_blank" href="/myresume.do"><strong>在线简历：jason的简历</strong></a></span><br>
                             <span>设置于2014-07-01 17:08</span>
                         </div>
                         <a title="设置默认投递简历" href="#setResume" class="inline fl cboxElement">重新设置</a>
@@ -1793,7 +1793,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a target="_blank" class="more" href="mList.jsp">更多推荐职位&gt;&gt;</a>
+                    <a target="_blank" class="more" href="/mList.do">更多推荐职位&gt;&gt;</a>
                 </div><!--end #myRecommend-->
                 <a class="eventAd" target="_blank"
                    href="subject/s_zhouyou.jsp?utm_source=BD__lagou&amp;utm_medium=&amp;utm_campaign=zhouyou">
@@ -1827,8 +1827,8 @@
                                     <span title="jason的简历">jason的简历</span>
                                 </label>
                                 <div class="setBtns">
-                                    <a target="_blank" href="resume/preview.jsp">预览</a> |
-                                    <a target="_blank" href="resume/myresume.jsp">修改</a>
+                                    <a target="_blank" href="/preview.do">预览</a> |
+                                    <a target="_blank" href="/myresume.do">修改</a>
                                 </div>
                                 <div class="clear"></div>
                                 <label class="radio">
@@ -1874,8 +1874,8 @@
                                     <span title="jason的简历">jason的简历</span>
                                 </label>
                                 <div class="setBtns">
-                                    <a target="_blank" href="resume/preview.jsp">预览</a> |
-                                    <a target="_blank" href="resume/myresume.jsp">修改</a>
+                                    <a target="_blank" href="/preview.do">预览</a> |
+                                    <a target="_blank" href="/myresume.do">修改</a>
                                 </div>
                                 <div class="clear"></div>
                                 <label class="radio">
@@ -1956,18 +1956,18 @@
             <div style="height:240px;" class="popup" id="loginPop">
                 <form id="loginForm">
                     <input type="text" placeholder="请输入登录邮箱地址" tabindex="1" name="email" id="email"
-                           style="background-image: url(style/images/img/0CQnd2Jos49xUAAAAASUVORK5CYII=quot); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;">
+                           style="background-image: url(/style/images/img/0CQnd2Jos49xUAAAAASUVORK5CYII=quot); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;">
                     <input type="password" placeholder="请输入密码" tabindex="2" name="password" id="password"
-                           style="background-image: url(style/images/img/0CQnd2Jos49xUAAAAASUVORK5CYII=quot); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;">
+                           style="background-image: url(/style/images/img/0CQnd2Jos49xUAAAAASUVORK5CYII=quot); background-repeat: no-repeat; background-attachment: scroll; background-position: right center;">
                     <span id="beError" style="display:none;" class="error"></span>
                     <label for="remember" class="fl"><input type="checkbox" name="autoLogin" checked="checked" value=""
                                                             id="remember"> 记住我</label>
-                    <a class="fr" href="reset.jsp">忘记密码？</a>
+                    <a class="fr" href="/reset.do">忘记密码？</a>
                     <input type="submit" value="登 &nbsp; &nbsp; 录" id="submitLogin">
                 </form>
                 <div class="login_right">
                     <div>还没有拉勾帐号？</div>
-                    <a class="registor_now" href="register.jsp">立即注册</a>
+                    <a class="registor_now" href="/register.do">立即注册</a>
                     <div class="login_others">使用以下帐号直接登录:</div>
                     <a title="使用新浪微博帐号登录" class="icon_wb" target="_blank" href="ologin/auth/sina.jsp"></a>
                     <a title="使用腾讯QQ帐号登录" target="_blank" class="icon_qq" href="ologin/auth/qq.jsp"></a>
@@ -2185,7 +2185,7 @@
                                            title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M">
                                 </a>
                             </form>
-                            <a target="_blank" href="resume/basic.jsp" class="btn">完善在线简历</a>
+                            <a target="_blank" href="/basic.do" class="btn">完善在线简历</a>
                         </td>
                     </tr>
                     </tbody>
@@ -2228,7 +2228,7 @@
                 <h4>登录邮箱未验证</h4>
                 <p>请验证你的登录邮箱以使用拉勾网的所有功能！ </p>
                 <p>我们已将验证邮件发送至：<a>840389046@qq.com</a>，请点击邮件内的链接完成验证。</p>
-                <p><a id="resend" href="javascript:void(0)">重新发送验证邮件 </a> | <a target="_blank" href="register.jsp">
+                <p><a id="resend" href="javascript:void(0)">重新发送验证邮件 </a> | <a target="_blank" href="/register.do">
                     换个邮箱？ </a></p>
             </div><!--/#activePop-->
 
@@ -2503,8 +2503,7 @@ var options = {
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="about.jsp">联系我们</a>
-        <a target="_blank" href="af/zhaopin.jsp">互联网公司导航</a>
+        <a rel="nofollow" target="_blank" href="/about.do">联系我们</a>
         <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
         <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>
         <div class="copyright">&copy;2013-2014 Lagou <a
@@ -2544,14 +2543,14 @@ var options = {
                 if (notice.status[0] == 0) {
                     $('#noticeDot-0').hide();
                     $('#noticeTip').hide();
-                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/delivery.do');
                 } else {
                     $('#noticeDot-0').show();
                     $('#noticeTip strong').text(notice.status[0]);
                     $('#noticeTip').show();
-                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp?tag=0&amp;r=0');
-                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp?tag=0&amp;r=0');
+                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
                 }
                 $('#noticeDot-1').hide();
             };

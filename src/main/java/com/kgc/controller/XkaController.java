@@ -3,5 +3,5 @@ package com.kgc.controller;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class ResumesController {
+public class XkaController {
 }

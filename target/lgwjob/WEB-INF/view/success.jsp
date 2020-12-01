@@ -2,11 +2,7 @@
 <!DOCTYPE HTML>
 <html xmlns:wb="http://open.weibo.com/wb">
 <head>
-    </script><
-script
-type = "text/javascript"
-async = ""
-src = "style/js/conversion.js" ></script>
+    <script type = "text/javascript" async = "" src = "style/js/conversion.js"></script>
     <script src="style/js/allmobilize.min.js" charset="utf-8" id="allmobilize"></script>
     <style type="text/css"></style>
     <meta content="no-siteapp" http-equiv="Cache-Control">
@@ -46,17 +42,17 @@ src = "style/js/conversion.js" ></script>
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a class="logo" href="index.jsp">
+            <a class="logo" href="/index.do">
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
-                <li class="current"><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li class="current"><a href="/companylist.do">公司</a></li>
                 <li><a target="_blank" href="">论坛</a></li>
                 <li>
                     <a rel="nofollow" href="">简历管理</a>
                 </li>
-                <li><a rel="nofollow" href="create.jsp">发布职位</a></li>
+                <li><a rel="nofollow" href="/create.do">发布职位</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -64,12 +60,12 @@ src = "style/js/conversion.js" ></script>
                     <span class="red dn" id="noticeDot-1"></span>
                     <i></i>
                 </dt>
-                <dd><a href="positions.jsp">我发布的职位</a></dd>
+                <dd><a href="/positions.do">我发布的职位</a></dd>
                 <dd><a href="">我收到的简历</a></dd>
-                <dd class="btm"><a href="myhome.jsp">我的公司主页</a></dd>
-                <dd><a href="jianli.jsp">我要找工作</a></dd>
-                <dd><a href="accountBind.jsp">帐号设置</a></dd>
-                <dd class="logout"><a rel="nofollow" href="login.jsp">退出</a></dd>
+                <dd class="btm"><a href="/myhome.do">我的公司主页</a></dd>
+                <dd><a href="/jianli.do">我要找工作</a></dd>
+                <dd><a href="/accountBind.do">帐号设置</a></dd>
+                <dd class="logout"><a rel="nofollow" href="/login.do">退出</a></dd>
             </dl>
         </div>
     </div><!-- end #header -->
@@ -84,8 +80,8 @@ src = "style/js/conversion.js" ></script>
                 </dt>
                 <dd class="c_notice">
                     <h4>恭喜你，公司信息已填写完善，你可以发布职位啦！</h4>
-                    <a class="greylink" href="create.jsp">发布新职位</a>
-                    <a class="greylink" href="myhome.jsp"> 进入我的公司主页</a>
+                    <a class="greylink" href="/create.do">发布新职位</a>
+                    <a class="greylink" href="/myhome.do"> 进入我的公司主页</a>
                 </dd>
             </dl>
         </div>
@@ -97,7 +93,7 @@ src = "style/js/conversion.js" ></script>
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="about.jsp">联系我们</a>
+        <a rel="nofollow" target="_blank" href="/about.do">联系我们</a>
         <a target="_blank" href="http://www.lagou.com/af/zhaopin.jsp">互联网公司导航</a>
         <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
         <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>

@@ -48,14 +48,14 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a class="logo" href="index.jsp">
+            <a class="logo" href="/index.do">
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a target="_blank" href="">论坛</a></li>
-                <li><a rel="nofollow" href="jianli.jsp">我的简历</a></li>
+                <li><a rel="nofollow" href="/jianli.do">我的简历</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -63,18 +63,18 @@
                     <span class="red dn" id="noticeDot-0"></span>
                     <i></i>
                 </dt>
-                <dd><a rel="nofollow" href="jianli.jsp">我的简历</a></dd>
-                <dd><a href="collections.jsp">我收藏的职位</a></dd>
-                <dd><a href="delivery.jsp">我投递的职位 <span id="noticeNo" class="red dn">(0)</span></a></dd>
-                <dd class="btm"><a href="subscribe.jsp">我的订阅</a></dd>
-                <dd><a href="create.jsp">我要招人</a></dd>
-                <dd><a href="accountBind.jsp">帐号设置</a></dd>
-                <dd class="logout"><a rel="nofollow" href="login.jsp">退出</a></dd>
+                <dd><a rel="nofollow" href="/jianli.do">我的简历</a></dd>
+                <dd><a href="/collections.do">我收藏的职位</a></dd>
+                <dd><a href="/delivery.do">我投递的职位 <span id="noticeNo" class="red dn">(0)</span></a></dd>
+                <dd class="btm"><a href="/subscribe.do">我的订阅</a></dd>
+                <dd><a href="/create.do">我要招人</a></dd>
+                <dd><a href="/accountBind.do">帐号设置</a></dd>
+                <dd class="logout"><a rel="nofollow" href="/login.do">退出</a></dd>
             </dl>
             <div class="dn" id="noticeTip">
                 <span class="bot"></span>
                 <span class="top"></span>
-                <a target="_blank" href="delivery.jsp"><strong>0</strong>条新投递反馈</a>
+                <a target="_blank" href="/delivery.do"><strong>0</strong>条新投递反馈</a>
                 <a class="closeNT" href="javascript:;"></a>
             </div>
         </div>
@@ -83,7 +83,7 @@
 
         <div class="clearfix">
             <div class="content_l recommend_list">
-                <h2>拉勾网根据你的个人简历为你推荐以下职位： <a class="more" href="jianli.jsp">修改简历信息&gt;&gt;</a></h2>
+                <h2>拉勾网根据你的个人简历为你推荐以下职位： <a class="more" href="/jianli.do">修改简历信息&gt;&gt;</a></h2>
 
                 <ul class="hot_pos reset">
                     <li class="clearfix">
@@ -608,7 +608,7 @@
             </div>
             <div class="content_r">
                 <div class="subscribe_side">
-                    <a target="_blank" href="subscribe.jsp">
+                    <a target="_blank" href="/subscribe.do">
                         <div class="subpos"><span>订阅</span> 职位</div>
                         <div class="c7">拉勾网会根据你的筛选条件，定期将符合你要求的职位信息发给你
                         </div>
@@ -652,7 +652,7 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="about.jsp">联系我们</a>
+        <a rel="nofollow" target="_blank" href="/about.do">联系我们</a>
         <a target="_blank" href="http://www.lagou.com/af/zhaopin.jsp">互联网公司导航</a>
         <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
         <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>
@@ -692,14 +692,14 @@
                 if (notice.status[0] == 0) {
                     $('#noticeDot-0').hide();
                     $('#noticeTip').hide();
-                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/delivery.do');
                 } else {
                     $('#noticeDot-0').show();
                     $('#noticeTip strong').text(notice.status[0]);
                     $('#noticeTip').show();
-                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
                 }
                 $('#noticeDot-1').hide();
             };

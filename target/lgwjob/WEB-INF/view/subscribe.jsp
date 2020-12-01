@@ -45,20 +45,20 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a href="index.jsp" class="logo">
+            <a href="/index.do" class="logo">
                 <img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘"/>
             </a>
             <ul class="reset" id="navheader">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a href="h/toForum.jsp" target="_blank">论坛</a></li>
-                <li><a href="jianli.jsp" rel="nofollow">我的简历</a></li>
-                <li><a href="create.jsp" rel="nofollow">发布职位</a></li>
+                <li><a href="/jianli.do" rel="nofollow">我的简历</a></li>
+                <li><a href="/create.do" rel="nofollow">发布职位</a></li>
             </ul>
             <ul class="loginTop">
-                <li><a href="login.jsp" rel="nofollow">登录</a></li>
+                <li><a href="/login.do" rel="nofollow">登录</a></li>
                 <li>|</li>
-                <li><a href="register.jsp" rel="nofollow">注册</a></li>
+                <li><a href="/register.do" rel="nofollow">注册</a></li>
             </ul>
         </div>
     </div><!-- end #header -->
@@ -562,7 +562,7 @@
                 <p>我们将定期发送订阅邮件至：<a></a>，请注意查收。</p>
                 <table width="100%">
                     <tr>
-                        <td align="center"><a href="subscribe.jsp" class="btn_s">确&nbsp;定</a></td>
+                        <td align="center"><a href="/subscribe.do" class="btn_s">确&nbsp;定</a></td>
                     </tr>
                 </table>
             </div><!--/#subscribeSuccessLogined-->
@@ -631,12 +631,12 @@
                     <span class="error" style="display:none;" id="beError"></span>
                     <label class="fl" for="remember"><input type="checkbox" id="remember" value="" checked="checked"
                                                             name="autoLogin"/> 记住我</label>
-                    <a href="h/reset.jsp" class="fr" target="_blank">忘记密码？</a>
+                    <a href="/reset.do" class="fr" target="_blank">忘记密码？</a>
                     <input type="submit" id="submitLogin" value="登 &nbsp; &nbsp; 录"/>
                 </form>
                 <div class="login_right">
                     <div>还没有拉勾帐号？</div>
-                    <a href="register.jsp" class="registor_now">立即注册</a>
+                    <a href="/register.do" class="registor_now">立即注册</a>
                     <div class="login_others">使用以下帐号直接登录:</div>
                     <a href="h/ologin/auth/sina.jsp" target="_blank" class="icon_wb" title="使用新浪微博帐号登录"></a>
                     <a href="h/ologin/auth/qq.jsp" class="icon_qq" target="_blank" title="使用腾讯QQ帐号登录"></a>
@@ -676,7 +676,7 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a href="h/about.jsp" target="_blank" rel="nofollow">联系我们</a>
+        <a href="/about.do" target="_blank" rel="nofollow">联系我们</a>
         <a href="h/af/zhaopin.jsp" target="_blank">互联网公司导航</a>
         <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
         <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>

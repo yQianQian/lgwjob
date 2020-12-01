@@ -40,20 +40,20 @@
 <div id="body">
     <div id="header">
         <div class="wrapper">
-            <a href="index.jsp" class="logo">
+            <a href="/index.do" class="logo">
                 <img src="style/images/logo.png" width="229" height="43" alt="拉勾招聘-专注互联网招聘"/>
             </a>
             <ul class="reset" id="navheader">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a href="h/toForum.jsp" target="_blank">论坛</a></li>
-                <li><a href="jianli.jsp" rel="nofollow">我的简历</a></li>
-                <li><a href="create.jsp" rel="nofollow">发布职位</a></li>
+                <li><a href="/jianli.do" rel="nofollow">我的简历</a></li>
+                <li><a href="/create.do" rel="nofollow">发布职位</a></li>
             </ul>
             <ul class="loginTop">
-                <li><a href="login.jsp" rel="nofollow">登录</a></li>
+                <li><a href="/login.do" rel="nofollow">登录</a></li>
                 <li>|</li>
-                <li><a href="register.jsp" rel="nofollow">注册</a></li>
+                <li><a href="/register.do" rel="nofollow">注册</a></li>
             </ul>
         </div>
     </div><!-- end #header -->
@@ -91,7 +91,7 @@
 
                     <dd class="unresume">
                         <div>
-                            你在拉勾还没有简历呢，你可以<a href="login.jsp" target="_blank" title="完善在线简历">完善在线简历</a>，也可<a
+                            你在拉勾还没有简历呢，你可以<a href="/login.do" target="_blank" title="完善在线简历">完善在线简历</a>，也可<a
                                 class="inline" href="#loginPop" title="登录">上传附件简历</a>直接投递
                         </div>
                     </dd>
@@ -199,7 +199,7 @@
                 <span class="positioncount"></span>
                 <a href="#loginPop" class="bar_login inline" title="登录"><i></i></a>
                 <div class="right">
-                    <a href="register.jsp?from=jobs_footerbar"
+                    <a href="/register.do"
                        onclick="_hmt.push(['_trackEvent', 'button', 'click', 'register'])" class="bar_register"
                        id="bar_register" target="_blank"><i></i></a>
                 </div>
@@ -225,7 +225,7 @@
                                     <span class="red">在线简历还不完善，请完善后选择投递</span>
                                 </label>
                                 <div class="setBtns">
-                                    <a href="jianli.jsp" target="_blank">修改</a>
+                                    <a href="/jianli.do" target="_blank">修改</a>
                                 </div>
                                 <div class="clear"></div>
                                 <label class="radio">
@@ -268,7 +268,7 @@
                                     <span class="red">在线简历还不完善，请完善后选择投递</span>
                                 </label>
                                 <div class="setBtns">
-                                    <a href="jianli.jsp" target="_blank">修改</a>
+                                    <a href="/jianli.do" target="_blank">修改</a>
                                 </div>
                                 <div class="clear"></div>
                                 <label class="radio">
@@ -347,12 +347,12 @@
                     <span class="error" style="display:none;" id="beError"></span>
                     <label class="fl" for="remember"><input type="checkbox" id="remember" value="" checked="checked"
                                                             name="autoLogin"/> 记住我</label>
-                    <a href="h/reset.jsp" class="fr">忘记密码？</a>
+                    <a href="/reset.do" class="fr">忘记密码？</a>
                     <input type="submit" id="submitLogin" value="登 &nbsp; &nbsp; 录"/>
                 </form>
                 <div class="login_right">
                     <div>还没有拉勾帐号？</div>
-                    <a href="register.jsp" class="registor_now">立即注册</a>
+                    <a href="/register.do" class="registor_now">立即注册</a>
                     <div class="login_others">使用以下帐号直接登录:</div>
                     <a href="h/ologin/auth/sina.jsp" target="_blank" class="icon_wb" title="使用新浪微博帐号登录"></a>
                     <a href="h/ologin/auth/qq.jsp" class="icon_qq" target="_blank" title="使用腾讯QQ帐号登录"></a>
@@ -557,7 +557,7 @@
                                            onchange="file_check(this,'h/nearBy/updateMyResume.json','resumeUpload2')"/>
                                 </a>
                             </form>
-                            <a class="btn" href="jianli.jsp" target="_blank">完善在线简历</a>
+                            <a class="btn" href="/jianli.do" target="_blank">完善在线简历</a>
                         </td>
                     </tr>
                 </table>
@@ -597,7 +597,7 @@
                 <h4>登录邮箱未验证</h4>
                 <p>请验证你的登录邮箱以使用拉勾网的所有功能！ </p>
                 <p>我们已将验证邮件发送至：<a></a>，请点击邮件内的链接完成验证。</p>
-                <p><a href="javascript:void(0)" id="resend">重新发送验证邮件 </a> | <a href="register.jsp" target="_blank">
+                <p><a href="javascript:void(0)" id="resend">重新发送验证邮件 </a> | <a href="/register.do" target="_blank">
                     换个邮箱？ </a></p>
             </div><!--/#activePop-->
 
@@ -756,7 +756,7 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a href="h/about.jsp" target="_blank" rel="nofollow">联系我们</a>
+        <a href="/about.do" target="_blank" rel="nofollow">联系我们</a>
         <a href="h/af/zhaopin.jsp" target="_blank">互联网公司导航</a>
         <a href="http://e.weibo.com/lagou720" target="_blank" rel="nofollow">拉勾微博</a>
         <a class="footer_qr" href="javascript:void(0)" rel="nofollow">拉勾微信<i></i></a>

@@ -2,11 +2,7 @@
 <!DOCTYPE HTML>
 <html xmlns:wb="http://open.weibo.com/wb">
 <head>
-    </script><
-script
-type = "text/javascript"
-async = ""
-src = "style/js/conversion.js" ></script>
+    <script type = "text/javascript" async = "" src = "style/js/conversion.js"></script>
     <script src="style/js/allmobilize.min.js" charset="utf-8" id="allmobilize"></script>
     <style type="text/css"></style>
     <meta content="no-siteapp" http-equiv="Cache-Control">
@@ -1446,13 +1442,13 @@ src = "style/js/conversion.js" ></script>
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
+                <li><a href="/index.do">首页</a></li>
                 <li><a href="companylist.html">公司</a></li>
                 <li><a target="_blank" href="h/toForum.html">论坛</a></li>
                 <li>
-                    <a rel="nofollow" href="jianli.jsp">我的简历</a>
+                    <a rel="nofollow" href="/jianli.do">我的简历</a>
                 </li>
-                <li><a rel="nofollow" href="create.jsp">发布职位</a></li>
+                <li><a rel="nofollow" href="/create.do">发布职位</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -1460,9 +1456,9 @@ src = "style/js/conversion.js" ></script>
                     <span class="red dn" id="noticeDot-1"></span>
                     <i></i>
                 </dt>
-                <dd style="display: none;"><a href="positions.jsp">我发布的职位</a></dd>
-                <dd style="display: none;"><a href="positions.jsp">我收到的简历</a></dd>
-                <dd class="btm" style="display: none;"><a href="myhome.jsp">我的公司主页</a></dd>
+                <dd style="display: none;"><a href="/positions.do">我发布的职位</a></dd>
+                <dd style="display: none;"><a href="/positions.do">我收到的简历</a></dd>
+                <dd class="btm" style="display: none;"><a href="/myhome.do">我的公司主页</a></dd>
                 <dd style="display: none;"><a href="list.html">我要找工作</a></dd>
                 <dd style="display: none;"><a href="accountBind.html">帐号设置</a></dd>
                 <dd class="logout" style="display: none;"><a rel="nofollow" href="login.html">退出</a></dd>
@@ -1516,12 +1512,12 @@ src = "style/js/conversion.js" ></script>
                     <dd class="resume resume_web">
                         <div>
                             <span> 你已有可投递的在线简历：<a title="jason的简历" target="_blank"
-                                                  href="jianli.jsp"><strong>jason的简历</strong></a></span><br>
+                                                  href="/jianli.do"><strong>jason的简历</strong></a></span><br>
                             <span>简历更新于2014-07-01 15:53</span>
                         </div>
                         <span class="setBtns">
 				                        	<a target="_blank" title="预览" href="h/resume/preview.html">预览</a> |
-				                        	<a title="修改" target="_blank" href="jianli.jsp">修改</a>
+				                        	<a title="修改" target="_blank" href="/jianli.do">修改</a>
 				                        </span>
                     </dd>
                     <div class="saoma saoma_btm">
@@ -1774,7 +1770,7 @@ src = "style/js/conversion.js" ></script>
                                 </label>
                                 <div class="setBtns">
                                     <a target="_blank" href="h/resume/preview.html">预览</a> |
-                                    <a target="_blank" href="jianli.jsp">修改</a>
+                                    <a target="_blank" href="/jianli.do">修改</a>
                                 </div>
                                 <div class="clear"></div>
                                 <label class="radio">
@@ -1820,7 +1816,7 @@ src = "style/js/conversion.js" ></script>
                                 </label>
                                 <div class="setBtns">
                                     <a target="_blank" href="h/resume/preview.html">预览</a> |
-                                    <a target="_blank" href="jianli.jsp">修改</a>
+                                    <a target="_blank" href="/jianli.do">修改</a>
                                 </div>
                                 <div class="clear"></div>
                                 <label class="radio">
@@ -2129,7 +2125,7 @@ src = "style/js/conversion.js" ></script>
                                            title="支持word、pdf、ppt、txt、wps格式文件，大小不超过10M">
                                 </a>
                             </form>
-                            <a target="_blank" href="jianli.jsp" class="btn">完善在线简历</a>
+                            <a target="_blank" href="/jianli.do" class="btn">完善在线简历</a>
                         </td>
                     </tr>
                     </tbody>

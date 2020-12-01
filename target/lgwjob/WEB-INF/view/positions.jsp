@@ -47,10 +47,10 @@
                 <img width="229" height="43" alt="拉勾招聘-专注互联网招聘" src="style/images/logo.png">
             </a>
             <ul id="navheader" class="reset">
-                <li><a href="index.jsp">首页</a></li>
-                <li><a href="companylist.jsp">公司</a></li>
+                <li><a href="/index.do">首页</a></li>
+                <li><a href="/companylist.do">公司</a></li>
                 <li><a target="_blank" href="http://www.lagou.com/toForum.jsp">论坛</a></li>
-                <li><a rel="nofollow" href="jianli.jsp">我的简历</a></li>
+                <li><a rel="nofollow" href="/jianli.do">我的简历</a></li>
             </ul>
             <dl class="collapsible_menu">
                 <dt>
@@ -58,50 +58,50 @@
                     <span class="red" id="noticeDot-0"></span>
                     <i></i>
                 </dt>
-                <dd><a rel="nofollow" href="jianli.jsp">我的简历</a></dd>
-                <dd><a href="collections.jsp">我收藏的职位</a></dd>
-                <dd><a href="delivery.jsp">我投递的职位 <span id="noticeNo" class="red">(1)</span></a></dd>
-                <dd class="btm"><a href="subscribe.jsp">我的订阅</a></dd>
-                <dd><a href="create.jsp">我要招人</a></dd>
-                <dd><a href="accountBind.jsp">帐号设置</a></dd>
-                <dd class="logout"><a rel="nofollow" href="login.jsp">退出</a></dd>
+                <dd><a rel="nofollow" href="/jianli.do">我的简历</a></dd>
+                <dd><a href="/collections.do">我收藏的职位</a></dd>
+                <dd><a href="/delivery.do">我投递的职位 <span id="noticeNo" class="red">(1)</span></a></dd>
+                <dd class="btm"><a href="/subscribe.do">我的订阅</a></dd>
+                <dd><a href="/create.do">我要招人</a></dd>
+                <dd><a href="/accountBind.do">帐号设置</a></dd>
+                <dd class="logout"><a rel="nofollow" href="/login.do">退出</a></dd>
             </dl>
             <div id="noticeTip">
                 <span class="bot"></span>
                 <span class="top"></span>
-                <a target="_blank" href="delivery.jsp"><strong>1</strong>条新投递反馈</a>
+                <a target="_blank" href="/delivery.do"><strong>1</strong>条新投递反馈</a>
                 <a class="closeNT" href="javascript:;"></a>
             </div>
         </div>
     </div><!-- end #header -->
     <div id="container">
         <div class="sidebar">
-            <a class="btn_create" href="create.jsp">发布新职位</a>
+            <a class="btn_create" href="/create.do">发布新职位</a>
             <dl class="company_center_aside">
                 <dt>我收到的简历</dt>
                 <dd>
-                    <a href="unHandleResumes.jsp">待处理简历</a>
+                    <a href="/unHandleResumes.do">待处理简历</a>
                 </dd>
                 <dd>
-                    <a href="canInterviewResumes.jsp">待定简历</a>
+                    <a href="/canInterviewResumes.do">待定简历</a>
                 </dd>
                 <dd>
-                    <a href="haveNoticeResumes.jsp">已通知面试简历</a>
+                    <a href="/haveNoticeResumes.do">已通知面试简历</a>
                 </dd>
                 <dd>
-                    <a href="haveRefuseResumes.jsp">不合适简历</a>
+                    <a href="/haveRefuseResumes.do">不合适简历</a>
                 </dd>
                 <dd class="btm">
-                    <a href="autoFilterResumes.jsp">自动过滤简历</a>
+                    <a href="/autoFilterResumes.do">自动过滤简历</a>
                 </dd>
             </dl>
             <dl class="company_center_aside">
                 <dt>我发布的职位</dt>
                 <dd class="current">
-                    <a href="positions.jsp">有效职位</a>
+                    <a href="/positions.do">有效职位</a>
                 </dd>
                 <dd>
-                    <a href="positions.jsp">已下线职位</a>
+                    <a href="/positions.do">已下线职位</a>
                 </dd>
             </dl>
         </div><!-- end .sidebar -->
@@ -122,12 +122,12 @@
                                     <span>[上海]</span>
                                 </h3>
                                 <span class="receivedResumeNo"><a
-                                        href="unHandleResumes.jsp?positionId=149594">应聘简历（1）</a></span>
+                                        href="/unHandleResumes.do">应聘简历（1）</a></span>
                                 <div>兼职 / 1k-2k / 1-3年 / 硕士及以上</div>
                                 <div class="c9">发布时间： 2014-07-01 17:07:01</div>
                                 <div class="links">
                                     <a class="job_refresh" href="javascript:void(0)">刷新<span>每个职位7天内只能刷新一次</span></a>
-                                    <a target="_blank" class="job_edit" href="create.jsp?positionId=149594">编辑</a>
+                                    <a target="_blank" class="job_edit" href="/create.do">编辑</a>
                                     <a class="job_offline" href="javascript:void(0)">下线</a>
                                     <a class="job_del" href="javascript:void(0)">删除</a>
                                 </div>
@@ -145,8 +145,8 @@
 </div><!-- end #body -->
 <div id="footer">
     <div class="wrapper">
-        <a rel="nofollow" target="_blank" href="about.jsp">联系我们</a>
-        <a target="_blank" href="http://www.lagou.com/af/zhaopin.jsp">互联网公司导航</a>
+        <a rel="nofollow" target="_blank" href="/about.do">联系我们</a>
+        <a target="_blank" href="http://www.lagou.com/af/zhaopin.d">互联网公司导航</a>
         <a rel="nofollow" target="_blank" href="http://e.weibo.com/lagou720">拉勾微博</a>
         <a rel="nofollow" href="javascript:void(0)" class="footer_qr">拉勾微信<i></i></a>
         <div class="copyright">&copy;2013-2014 Lagou <a
@@ -186,14 +186,14 @@
                 if (notice.status[0] == 0) {
                     $('#noticeDot-0').hide();
                     $('#noticeTip').hide();
-                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text('').show().parent('a').attr('href', ctx + '/delivery.do');
                 } else {
                     $('#noticeDot-0').show();
                     $('#noticeTip strong').text(notice.status[0]);
                     $('#noticeTip').show();
-                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
-                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/mycenter/delivery.jsp');
+                    $('#noticeNo').text('(' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
+                    $('#noticeNoPage').text(' (' + notice.status[0] + ')').show().parent('a').attr('href', ctx + '/delivery.do');
                 }
                 $('#noticeDot-1').hide();
             };
